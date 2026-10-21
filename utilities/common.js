@@ -3,6 +3,12 @@ function changePage(page){
     updateView()
 }
 
+function searchProductHome(search){
+    model.viewState.homePage.search = search
+    generateProductHome()
+    updateView()
+}
+
 function testProduct(){
     const geirVinyl= {
         id: 2,
@@ -19,7 +25,7 @@ function testProduct(){
     const beckaKassett= {
         id: 3,
             title: 'ForLoop',
-            img: null,
+            img: 'img/placeholder.jpg',
             formatID: 2,
             artist: 'Becka Baguett',
             year: 2020,
@@ -31,7 +37,7 @@ function testProduct(){
     const terjeCD= {
         id: 4,
             title: 'ChatGPT',
-            img: null,
+            img: 'img/placeholder.jpg',
             formatID: 3,
             artist: 'TerjeGPT',
             year: 2026,
