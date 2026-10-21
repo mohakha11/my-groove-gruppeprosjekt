@@ -7,7 +7,7 @@ function testProduct(){
     const geirVinyl= {
         id: 2,
             title: 'Nøkkelkompetanse',
-            img: null,
+            img: 'img/placeholder.jpg',
             formatID: 1,
             artist: 'Geir Sollid',
             year: 1998,

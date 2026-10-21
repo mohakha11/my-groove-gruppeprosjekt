@@ -1,13 +1,13 @@
 function cartPage(){
     let html = /*HTML*/`
         <h1>Handlekurv</h1>
-        <div id="handle">
-            <section>
+        <div id="cart-container">
+            <section class="cart">
                 <h2>Oppsummering</h2>
                 <div>${showProductsCart()}</div>
             </section>
 
-            <section>
+            <section class="cart">
                 <h2>Betalingsmetode</h2>
                 <p>Eksempel: Bestilling kan hentes i butikk opp til en uke etter betaling.</p>
                 <br>
@@ -18,10 +18,10 @@ function cartPage(){
                 <p><u>Total: 720kr</u></p>
 
                 <section>
-                    <button>Kort</button>
-                    <button>Vipps</button>
+                    <button class="payBtn">Kort</button>
+                    <button class="payBtn">Vipps</button>
                 <section>
-                <button>Fullført Betaling</button>
+                <button class="payBtn">Fullfør Betaling</button>
             </section>
         </div>
     `
@@ -32,10 +32,18 @@ function cartPage(){
 
 function showProductsCart(){
     let html = /*HTML*/ `
-        <img class="previewimg"
-            Produkt 1
-            Antall: 1
-            250kr
+    <section class="cartItem">
+        <img class="previewimg" 
+        src="${model.productsData[0].img}">
+        
+        <div>
+            <div>${model.productsData[0].title}, ${model.productsData[0].artist}</div>
+            <div>${model.productsData[0].label}</div>
+            <div>${model.productsData[0].year}</div>
+            <div>Antall: 1</div>
+            <div>${model.productsData[0].price} kr.</div>
+        </div>
+    </section>
     
     `
     return html
