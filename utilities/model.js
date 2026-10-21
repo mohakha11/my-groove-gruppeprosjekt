@@ -71,18 +71,18 @@ const model = {
         { name: "cd", id: 3},
     ],
     productsData: [
-        {
-            id: 1,
-            title: 'Album',
-            img: null,
-            formatID: 1,
-            artist: 'ABBA',
-            year: 1998,
-            label: null,
-            price: 250,
-            amount: null,
-            updated: '16.10.2026',
-        },
+        //{
+        //    id: 1,
+        //    title: 'Album',
+        //    img: null,
+        //    formatID: 1,
+        //    artist: 'ABBA',
+        //    year: 1998,
+        //    label: null,
+        //    price: 250,
+        //    amount: null,
+        //    updated: '16.10.2026',
+        //},
     ],
     reviews: [
         {

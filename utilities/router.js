@@ -1,4 +1,6 @@
 function updateView(){
+    testProduct()
+    console.log(model.productsData)
     let loadedPage = ''
     if (model.app.currentPage === "landingPage") loadedPage = homePage()
     else if (model.app.currentPage === "productPage") loadedPage = productPage()
