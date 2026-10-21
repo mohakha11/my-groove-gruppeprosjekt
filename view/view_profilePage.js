@@ -14,7 +14,7 @@ function profilePage(){
            <p>med siden: 2023-10-01</p>
            <p>sist online: 2 timer siden</p>
         </div>
-            <button>Rediger profil</button>
+            <button onclick="editProfile()">Rediger profil</button>
             </div>
 
          
