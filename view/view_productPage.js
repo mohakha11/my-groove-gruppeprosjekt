@@ -1,5 +1,5 @@
 function productPage(productId){
-    let product;
+    let product = {}
 
     for(let i = 0; i < model.productsData.length; i++){
         if(model.productsData[i].id === productId){
