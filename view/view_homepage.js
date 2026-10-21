@@ -51,10 +51,11 @@ function generateProductHome(){
     let list = []
     if (search === null) return ''
     if (search !== null){
-        list = model.productsData.filter(item => item.label.toLowerCase().includes(search.toLowerCase()))
-        //list = model.productsData.filter(item => item.artist.toLowerCase().includes(search.toLowerCase()))
-        //list = model.productsData.filter(item => item.title.toLowerCase().includes(search.toLowerCase()))
-        console.log(list)
+        list = model.productsData.filter(item => 
+            item.label.toLowerCase().includes(search.toLowerCase()) ||
+            item.artist.toLowerCase().includes(search.toLowerCase()) ||
+            item.title.toLowerCase().includes(search.toLowerCase())
+        )
     }
 
     for (let i = 0; i < list.length; i++){
