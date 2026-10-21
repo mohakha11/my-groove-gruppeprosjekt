@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyGroove</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/main.css"/>
+    <link rel="stylesheet" href="style/homePage.css"/>
+    <link rel="stylesheet" href="style/cartPage.css"/>
 </head>
 
 
-<body>
+<body onload="updateView()">
     <div id="app"></div>
 
-    <script src="model.js"></script>
+    <script src="utilities/common.js"></script>
+    <script src="utilities/model.js"></script>
+    <script src="utilities/router.js"></script>
+
     <script src="view/view_homePage.js"></script>
     <script src="view/view_productPage.js"></script>
     <script src="view/view_profilePage.js"></script>
     <script src="view/view_cartPage.js"></script>
-    <script src="controller.js"></script>
+    
+    <script src="controller/controller_homePage.js"></script>
+    <script src="controller/controller_productPage.js"></script>
+    <script src="controller/controller_profilePage.js"></script>
+    <script src="controller/controller_cartPage.js"></script>
+
 </body>
 </html>

@@ -33,7 +33,6 @@ function cartPage(){
 function showProductsCart(){
     let html = /*HTML*/ `
         <img class="previewimg"
-            src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dblank%2Bvinyl%2Bcover&ved=0CBcQjRxqFwoTCJCv5sziypcDFQAAAAAdAAAAABA4&opi=89978449"> 
             Produkt 1
             Antall: 1
             250kr
