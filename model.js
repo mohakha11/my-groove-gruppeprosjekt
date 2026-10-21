@@ -7,6 +7,7 @@ const model = {
         homePage: {
             category: null, //VINYL CD KASSETT NYHETER
             search: null,
+            advanced: false,
         },
         advancedSearch: {
             advancedFilterID: [1, 3, 5, 7, 10],

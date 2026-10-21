@@ -1,0 +1,18 @@
+#test {
+    display: grid;
+} 
+
+#handle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.previewimg{
+    height: 100px;
+    width: 150px;
+}
+
+#category {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
