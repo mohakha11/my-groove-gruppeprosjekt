@@ -14,13 +14,13 @@ function profilePage() {
             <p>med siden: </p> <!-- må ha template literal -->
             <p>sist online: </p> <!-- må ha template literal -->
           </div>
-          <button onclick="editProfile()">Rediger profil</button>
+          <button onclick="editProfile()">Rediger profil</button> <!--Åpner instillingside med kundepreferanser-->
         </div>
     </section> 
 
     
     <section> <!--Midlertidig for visuell ref> --> <!--Ved klikk av favknapp på product page:
-     Må hente inn data og legge inn albumbilde, tittel. Klikkbar til productpage for gjeldende produkt-->
+     Må hente inn data og legge inn albumbilde, tittel. Klikkbar til productpage for gjeldende produkt. Utgangspunktet tom til man legger til favoritter.-->
         <div>
           <h3>favoritter</h3>
             <button>&gt;</button>
