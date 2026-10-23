@@ -1,7 +1,13 @@
 .product{
-    height: 100px;
-    width: 100px;
-    :hover{
+    height: 150px;
+    width: 200px;
+    text-align: center;
+    transition:
+        font-size 1s;
+    
+}
+
+.product:hover{
+        font-size: 18px;
         cursor: pointer;
     }
-}
