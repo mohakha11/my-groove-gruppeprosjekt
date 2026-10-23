@@ -5,6 +5,7 @@ function updateView(){
     else if (model.app.currentPage === "productPage") loadedPage = productPage()
     else if (model.app.currentPage === "profilePage") loadedPage = profilePage()
     else if (model.app.currentPage === "cartPage") loadedPage = cartPage()
+    else if (model.app.currentPage === "payPage") loadedPage = payPage()
 
 
     let header = /*HTML*/ `
@@ -20,6 +21,7 @@ function updateView(){
                 <button onclick="changePage('productPage')">Product Page</button>
                 <button onclick="changePage('profilePage')">Profile Page</button>
                 <button onclick="changePage('cartPage')">Handlekurv</button>
+                <button onclick="changePage('payPage')">Betaling</button>
             </section>
         </header>
     `

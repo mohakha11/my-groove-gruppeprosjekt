@@ -16,7 +16,7 @@ function testProduct(){
             img: 'img/placeholder.jpg',
             formatID: 1,
             artist: 'Geir Sollid',
-            year: 1998,
+            year: 2016,
             label: 'GET Academy',
             price: 25000,
             amount: 250,
