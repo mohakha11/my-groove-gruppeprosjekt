@@ -1,4 +1,6 @@
 .collection-IMG {
-  max-width: 20%;
-  height: auto;
+  /* temp css for oversikt */
+  min-width: 20px;
+  max-width: 100px;
+  max-height: auto;
 }
