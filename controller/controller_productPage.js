@@ -1,5 +1,5 @@
-function addToCart(){
-
+function addToCart(productID){
+    console.log(productID)
 }
 
 
