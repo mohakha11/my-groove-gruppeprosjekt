@@ -21,7 +21,7 @@ function cartPage(){
                 <p><u>Total: 720kr</u></p>
 
                 <button id="payBtn"
-                >Gå til betaling</button>
+                onclick="goToPayPage()">Gå til betaling</button>
             </section>
         </div>
     `
@@ -56,7 +56,28 @@ function showProductsCart(){
 
 function payPage(){
     let html = /*HTML*/ `
+    <div id="pay-container">
         <button>Tilbake</button>
+
+        <div>
+            <p>Fornavn:</p>
+            <input type="text">
+        </div>
+        <div>
+            <p>Etternavn:</p>
+            <input type="text">
+        </div>
+        <div>
+            <p>Telefon nummer:</p>
+            <input type="text">
+        </div>
+        <div>
+            <p>E-post:</p>
+            <input type="text">
+        </div>
+
+
+
     `
 
     return html

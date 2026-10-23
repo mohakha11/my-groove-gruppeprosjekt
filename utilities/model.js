@@ -128,10 +128,9 @@ const model = {
             online: false,
             registerDate: '10.10.2026',
             lastOnline: '16.10.2026',
-            contributions: 42,
-            recent: [1, 3, 5], //ID til produkter i butikk
-            favorites: [2, 3],
-            collection: [1, 2, 3, 4, 5],
+            contributions: 42, 
+            favorites: [2, 3], //ID til produkter i butikk
+            collection: [1, 2, 3],
             formatPref: null, //kunde sin format preferanse.
         },
     ],
