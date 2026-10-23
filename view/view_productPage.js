@@ -1,4 +1,5 @@
 function productPage(productId){
+    let currentProduct = productId
     let product = {}
 
     for(let i = 0; i < model.productsData.length; i++){
@@ -22,7 +23,7 @@ function productPage(productId){
             <p>${product.label}</p>
             <p>${product.formatID}</p>
 
-            <button onclick="addToCart()">Legg til handlekurv</button>
+            <button onclick="addToCart(currentProduct)">Legg til handlekurv</button>
         </div>
 
         <div>
