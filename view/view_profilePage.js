@@ -1,63 +1,54 @@
-function profilePage(){
-    let html = /*HTML*/`
-    <div> 
-          <div> 
+function profilePage() {
+  let html = /*HTML*/ `
+    <section> 
+        <div> 
 
-          <h2>Brukernavn</h2>
+          <h2>Brukernavn</h2> <!-- må ha template literal -->
         
           <div> 
-          <div>profilebilde</div>
+            <img onclick="changeProfilePic()" src="img/placeholder-profile.png" alt="Profil bilde"> <!-- Klikkbar for å endre profilbilde. Standard valg og evt. opplast. -->
           </div>
-        <div> 
-           <p>Bidragsyter</p>
-           <p>pålogget</p>
-           <p>med siden: 2023-10-01</p>
-           <p>sist online: 2 timer siden</p>
+          <div> 
+            <p>Bidragsyter</p> <!-- må ha template literal -->
+            <p>pålogget</p> <!-- må ha template literal -->
+            <p>med siden: 2023-10-01</p> <!-- må ha template literal -->
+            <p>sist online: 2 timer siden</p> <!-- må ha template literal -->
+          </div>
+          <button onclick="editProfile()">Rediger profil</button>
         </div>
-            <button onclick="editProfile()">Rediger profil</button>
-            </div>
+    </section> 
 
-         
-    <div> 
-        <div> 
-            
-          <h3>nylig lagt til</h3>
-            <button>&gt;</button>
-           <div>
-              <div>Bilde</div>
-              <div>Bilde</div>
-              <div>Bilde</div>
-              <button>&gt;</button>
-            </div>
-        </div>
-
-    <div> 
-        
+    
+    <section> 
+        <div>
           <h3>favoritter</h3>
             <button>&gt;</button>
-           <div>
-              <div>Bilde</div>
-              <div>Bilde</div>
-              <div>Bilde</div>
-              <button>&gt;</button>
-            </div>
-        </div>
-          <div> 
+          <div>
+            <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
+<!--            <img src="img/placeholder-product.png" alt="Produktbilde">
+            <img src="img/placeholder-product.png" alt="Produktbilde"> -->
+          </div>
+          <button>&gt;</button>
+        </div>  
+
         
-          <h3>samling</h3>
+         <!-- <div> 
+        <h3>samling</h3>
             <button>&gt;</button>
-           <div>
-              <div>Bilde</div>
-              <div>Bilde</div>
-              <div>Bilde</div>
-              <button>&gt;</button>
-            </div>
-        </div>
+          <div>
+            <div>Bilde</div>
+            <div>Bilde</div>
+            <div>Bilde</div>
+            <button>&gt;</button>
+          </div>
+        </div> -->
+
+    </section>
          
         
    
          
-         `
+         `;
 
-    return html
+  return html;
 }
