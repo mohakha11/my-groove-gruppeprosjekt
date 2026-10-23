@@ -15,6 +15,12 @@
     }
 }
 
+#pay-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
 .previewimg{
     height: 100px;
     width: 150px;
@@ -28,3 +34,4 @@
 .payBtn {
     background-color: aliceblue;
 }
+

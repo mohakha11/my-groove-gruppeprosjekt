@@ -60,10 +60,9 @@ function generateProductHome(){
 
     for (let i = 0; i < list.length; i++){
         html += /*HTML*/ `
-            <div>
+            <div onclick="goToProductPage(${list[i].id})" class="product">
                 <img class="previewimg" 
-                src="${list[i].img}"
-                onclick="productPage(${list[i].id})">
+                src="${list[i].img}">
                 <div>${list[i].title}</div>
                 <div>${list[i].artist}</div>
     

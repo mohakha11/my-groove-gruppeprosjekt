@@ -13,6 +13,7 @@ const model = {
             advancedFilterID: [1, 3, 5, 7, 10],
         },
         productPage: {
+            currentProductID: null,
             selectedAmount: null,
         },
         orderPage: {

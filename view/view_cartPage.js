@@ -1,6 +1,3 @@
-
-
-
 function cartPage(){
     
     let html = /*HTML*/`
@@ -29,8 +26,6 @@ function cartPage(){
     return html
 }
 
-
-
 function showProductsCart(){
     let html = /*HTML*/ `
     <section class="cartItem">
@@ -56,28 +51,47 @@ function showProductsCart(){
 
 function payPage(){
     let html = /*HTML*/ `
+    <button>Tilbake</button>
     <div id="pay-container">
-        <button>Tilbake</button>
+        <section>
+            <h3>Kundeinformasjon</h3>
 
-        <div>
-            <p>Fornavn:</p>
-            <input type="text">
-        </div>
-        <div>
-            <p>Etternavn:</p>
-            <input type="text">
-        </div>
-        <div>
-            <p>Telefon nummer:</p>
-            <input type="text">
-        </div>
-        <div>
-            <p>E-post:</p>
-            <input type="text">
-        </div>
+            <div>
+                <p>Fornavn:</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>Etternavn:</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>Telefon nummer:</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>E-post:</p>
+                <input type="text">
+            </div>
+        </section>
 
+        <section>
+            <h3>Åpningstider</h3>
+            <p>man-fre: 08:00-16:00</p>
+            <p>lør:     09:00-15:00</p>
+            <p>søn:     stengt</p>
+            <br>
+            <p>Bestillingsdato: Eksempel</p>
+            <p>Hentes senest: Eksempel</p>
+            <br>
+            <p>Du vil bli sendt en sms og e-post 
+            når bestillingen din er klar til henting</p>
+        </section>
 
-
+        <section>
+            <h3>Velg betalingsmetode</h3>
+        </section>
+    
+    </div>
     `
 
     return html
