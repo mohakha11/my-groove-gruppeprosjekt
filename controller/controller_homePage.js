@@ -3,11 +3,20 @@ function showFilterLanding(){
     updateView()
 }
 
-function sortByPrice(price){
-    if (price === 'low'){ 
+
+function sortHomeSearch(value, type){
+    //pathen funker så langt
+    if (type === 'price') sortByPrice(value)
+
+
+}
+
+function sortByPrice(value){
+    //funker inn hit og
+    if (value === 'low'){ 
         console.log('lav pris')
     }
-    if (price === 'high'){
+    if (value === 'high'){
         console.log('høy pris')
     }
 

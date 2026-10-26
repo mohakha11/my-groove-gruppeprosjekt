@@ -6,3 +6,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
+
+#profileBtn{
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    
+}

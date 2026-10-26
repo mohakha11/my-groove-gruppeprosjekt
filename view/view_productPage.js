@@ -23,7 +23,7 @@ function productPage() {
             <p>${product.label}</p>
             <p>${product.formatID}</p>
 
-            <button onclick="addToCart(model.viewState.productPage.currentProductID)">Legg til handlekurv</button>
+            <button onclick="addToCart(currentProduct)">Legg til handlekurv</button>
         </div>
 
         <div>
