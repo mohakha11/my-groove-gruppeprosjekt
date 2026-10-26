@@ -20,35 +20,34 @@ function profilePage() {
     </section> 
 
     
-    <section class="profile-carousel-section"> <!--Midlertidig for visuell ref> --> <!--Ved klikk av favknapp på product page:
-     Må hente inn data og legge inn albumbilde, tittel. Klikkbar til productpage for gjeldende produkt. Utgangspunktet tom til man legger til favoritter.-->
-        <div class="carousel-container">
-          <h3>favoritter</h3>
-          <div class="carousel-row">
+    <section class="profile-carousel-section">
+    <div class="carousel-container">
+        <h3>favoritter</h3>
+        <div class="carousel-row">
             <button>&gt;</button>
-          <div class="carousel-images">
-            <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-            <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-            <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-            <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-          <button>&gt;</button>
-        </div>  
-
-    
-         <!--       <div>
-          <h3>Samling</h3>
-            <button>&gt;</button>
-          <div>
-            <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-            <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-            <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-            <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
+            <div class="carousel-images">
+                <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
+                <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
+                <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
+                <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
             </div>
-          <button>&gt;</button>
+            <button>&gt;</button>
+        </div>
+    </div>
 
-        </div>  -->
-    
-    </section>
+    <div class="carousel-container">
+        <h3>Samling</h3>
+        <div class="carousel-row">
+            <button>&gt;</button>
+            <div class="carousel-images">
+                <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
+                <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
+                <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
+            </div>
+            <button>&gt;</button>
+        </div>
+    </div>
+</section>
          
         
    
