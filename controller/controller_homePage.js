@@ -1,6 +1,5 @@
-
 function showFilterLanding(){
-    model.viewState.homePage.advanced = true
+    model.viewState.homePage.advanced ^= 1
     updateView()
 }
 

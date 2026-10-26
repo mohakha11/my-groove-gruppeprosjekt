@@ -6,7 +6,7 @@ function homePage(){
             <div>CD</div>
             <div>Kassett</div>
             <div>Nyheter</div>
-        </section>
+        </section> 
         <section>
             <button onclick="showFilterLanding()">
             Avansert søk</button>
