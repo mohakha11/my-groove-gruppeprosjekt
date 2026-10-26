@@ -1,9 +1,13 @@
 
-function editProfile() {
-    console.log("Rediger profil ble trykket!");
-}
+let currentView = 'profile';
+let userName = "brukernavn";
 
+function goToEdit() {
+    currentView = 'edit';
+    updateView(); 
+}                       // begge de her funksjonene er for å bytte mellom sidene
 
-function nextSlide(kategori) {
-    console.log("Trykket pil for: " + kategori);
+function saveProfile() {
+    currentView = 'profile';
+    updateView(); 
 }

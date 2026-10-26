@@ -65,3 +65,9 @@
     gap: 20px;
     
 }
+.edit-buttons-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    width: 100px;
+}
