@@ -1,14 +1,15 @@
 function profilePage() {
   let html = /*HTML*/ `
-    <section> 
-        <div> 
+  <div class="profile-page">
+    <section class="profile-main-section"> 
+        <div class="profile-info-box"> 
 
-          <h2>Brukernavn</h2> <!-- må ha template literal -->
+          <h2 class="profile-info-box h2">Brukernavn</h2> <!-- må ha template literal -->
         
-          <div> 
+          <div class="profile-img-container">
             <img onclick="changeProfilePic()" src="img/placeholder-profile.png" alt="Profil bilde"> <!-- Klikkbar for å endre profilbilde. Standard valg og evt. opplast. -->
           </div>
-          <div> 
+          <div class="profile-text-details">
             <p>Rolle</p> <!-- må ha template literal -->
             <p>påloggstatus</p> <!-- må ha template literal -->
             <p>med siden: </p> <!-- må ha template literal -->
@@ -19,19 +20,22 @@ function profilePage() {
     </section> 
 
     
-    <section> <!--Midlertidig for visuell ref> --> <!--Ved klikk av favknapp på product page:
+    <section class="profile-carousel-section"> <!--Midlertidig for visuell ref> --> <!--Ved klikk av favknapp på product page:
      Må hente inn data og legge inn albumbilde, tittel. Klikkbar til productpage for gjeldende produkt. Utgangspunktet tom til man legger til favoritter.-->
-        <div>
+        <div class="carousel-container">
           <h3>favoritter</h3>
+          <div class="carousel-row">
             <button>&gt;</button>
-          <div>
+          <div class="carousel-images">
+            <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
+            <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
             <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
             <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
           <button>&gt;</button>
         </div>  
 
-        
- <!--       <div>
+    
+         <!--       <div>
           <h3>Samling</h3>
             <button>&gt;</button>
           <div>
@@ -39,10 +43,11 @@ function profilePage() {
             <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
             <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
             <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-          </div>
+            </div>
           <button>&gt;</button>
-        </div>  -->
 
+        </div>  -->
+    
     </section>
          
         
