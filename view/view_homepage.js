@@ -29,10 +29,11 @@ function filterButton(){
             <input type="radio" 
             name="price"
             value="low"
+            onchange="sortHomeSearch(this.value)"
             
             >Pris Lav
             <input type="radio" 
-            onchange="sortHomeHighPrice()"
+            onchange="sortHomeSearch(this.value)"
             name="price"
             value="high"
             >Pris Høy

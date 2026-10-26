@@ -1,10 +1,9 @@
-function productPage(productId){
+function productPage(){
     let currentProduct = model.viewState.productPage.currentProductID
-    console.log(currentProduct)
     let product = {}
 
     for(let i = 0; i < model.productsData.length; i++){
-        if(model.productsData[i].id === productId){
+        if(model.productsData[i].id === currentProduct){
             product = model.productsData[i];
             break;
         }
@@ -24,7 +23,7 @@ function productPage(productId){
             <p>${product.label}</p>
             <p>${product.formatID}</p>
 
-            <button onclick="addToCart(currentProduct)">Legg til handlekurv</button>
+            <button onclick="addToCart(model.viewState.productPage.currentProductID)">Legg til handlekurv</button>
         </div>
 
         <div>
