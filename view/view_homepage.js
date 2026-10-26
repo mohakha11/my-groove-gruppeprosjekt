@@ -25,23 +25,31 @@ function filterButton(){
     if (filter){
         let checkbox = /*HTML*/ `
         <section id="test">
-            <p>Pris:</p>
+            <b>Pris:</b>
             <input type="radio" 
             name="price"
             value="low"
-            onchange="sortHomeSearch(this.value, 'price')"
-            
-            >Pris Lav
+            onchange="sortHomeSearch(this.value, 'price')">
+            Pris Lav
+
             <input type="radio" 
             onchange="sortHomeSearch(this.value, 'price')"
             name="price"
-            value="high"
-            >Pris Høy
+            value="high">
+            Pris Høy
 
+            <b>Dato:</b>
+            <input type="radio"
+            name="date"
+            value="newest"
+            onchange="sortHomeSearch(this.value, 'date')">
+            Ny - Eldst
 
-            <p>Dato:</p>
-            <input type="radio">Ny - Eldst
-            <input type="radio">Eldst - Ny
+            <input type="radio"
+            name="date"
+            value="oldest"
+            onchange="sortHomeSearch(this.value, 'date')">
+            Eldst - Ny
         </section>    
         `
         let buttons = /*HTML*/ `
@@ -60,7 +68,6 @@ function filterButton(){
 
 function generateProductHome(){
     const search = model.viewState.homePage.search
-    let html = '';
     let list = model.viewState.homePage.searchResult
     if (search === null) return ''
     if (search !== null){
@@ -70,8 +77,12 @@ function generateProductHome(){
             item.title.toLowerCase().includes(search.toLowerCase())
         )
     }
-    
 
+    return generateProductList(list)
+}
+
+function generateProductList(list) {
+    let html = ''
     for (let i = 0; i < list.length; i++){
         html += /*HTML*/ `
             <section class="product" onclick="goToProductPage(${list[i].id})" >

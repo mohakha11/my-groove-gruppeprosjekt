@@ -7,6 +7,12 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
+#searchResult {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 20px;
+}
+
 #profileBtn{
     height: 60px;
     width: 60px;
