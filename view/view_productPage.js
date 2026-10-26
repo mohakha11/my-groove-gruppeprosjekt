@@ -1,5 +1,6 @@
 function productPage(productId){
-    let currentProduct = productId
+    let currentProduct = model.viewState.productPage.currentProductID
+    console.log(currentProduct)
     let product = {}
 
     for(let i = 0; i < model.productsData.length; i++){
