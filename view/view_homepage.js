@@ -15,7 +15,7 @@ function homePage(){
             >
         </section>
         <div>${filterButton()}</div>
-        <div>${generateProductHome()}</div>
+        <div id="searchResult">${generateProductHome()}</div>
     `
     return html
 }
@@ -61,10 +61,10 @@ function filterButton(){
 function generateProductHome(){
     const search = model.viewState.homePage.search
     let html = '';
-    let list = []
+    let list = model.viewState.homePage.searchResult
     if (search === null) return ''
     if (search !== null){
-        list = model.productsData.filter(item => 
+        model.viewState.homePage.searchResult = model.productsData.filter(item => 
             item.label.toLowerCase().includes(search.toLowerCase()) ||
             item.artist.toLowerCase().includes(search.toLowerCase()) ||
             item.title.toLowerCase().includes(search.toLowerCase())
@@ -85,5 +85,6 @@ function generateProductHome(){
             <br>
         `
     }
+
     return html
 }

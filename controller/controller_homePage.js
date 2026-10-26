@@ -3,21 +3,43 @@ function showFilterLanding(){
     updateView()
 }
 
+function searchProductHome2(search){
+    model.viewState.homePage.search = search
+    generateProductHome(search)
+    updateView()
+    //sortHomeSearch(search, 'input')
+}
 
-function sortHomeSearch(value, type){
-    //pathen funker så langt
+function sortHomeSearch(value='', type=''){
+    //let list
+    if (type === 'input') {
+
+    }
     if (type === 'price') sortByPrice(value)
-
 
 }
 
 function sortByPrice(value){
-    //funker inn hit og
+    let list = model.viewState.homePage.searchResult
+    let html = ''
     if (value === 'low'){ 
-        console.log('lav pris')
+        list.sort((a, b) => a.price - b.price)
+    } else if (value === 'high'){
+        list.sort((a, b) => b.price - a.price)
     }
-    if (value === 'high'){
-        console.log('høy pris')
+    for (let i = 0; i < list.length; i++){
+    html += /*HTML*/ `
+        <section class="product" onclick="goToProductPage(${list[i].id})" >
+            <img class="previewimg" 
+            src="${list[i].img}">
+            <div>${list[i].title}</div>
+            <div>${list[i].artist}</div>
+            <div>${list[i].price},- kr.</div>
+
+        </section>
+        <br>
+    `
     }
 
+    document.querySelector('#searchResult').innerHTML = html
 }
