@@ -1,17 +1,17 @@
-function productPage(){
-    let currentProduct = model.viewState.productPage.currentProductID
-    let product = {}
+function productPage() {
+  let currentProduct = model.viewState.productPage.currentProductID;
+  let product = {};
 
-    for(let i = 0; i < model.productsData.length; i++){
-        if(model.productsData[i].id === currentProduct){
-            product = model.productsData[i];
-            break;
-        }
+  for (let i = 0; i < model.productsData.length; i++) {
+    if (model.productsData[i].id === currentProduct) {
+      product = model.productsData[i];
+      break;
     }
+  }
 
-    let html = /*HTML*/`
+  let html = /*HTML*/ `
         <div>
-            <img src="img/placeholder-product.png">
+            <img src="${product.img}">
             <div>★★★★☆</div>
             <button>Kommentarer</button>
         </div>
@@ -23,7 +23,7 @@ function productPage(){
             <p>${product.label}</p>
             <p>${product.formatID}</p>
 
-            <button onclick="addToCart(model.viewState.productPage.currentProductID)">Legg til handlekurv</button>
+            <button onclick="addToCart(currentProduct)">Legg til handlekurv</button>
         </div>
 
         <div>
@@ -58,6 +58,5 @@ function productPage(){
     
     `;
 
-    return html
+  return html;
 }
-
