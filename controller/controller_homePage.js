@@ -3,3 +3,10 @@ function showFilterLanding(){
     updateView()
 }
 
+function sortHomeLowPrice(){
+    console.log('lav pris')
+}
+
+function sortHomeHighPrice(){
+
+}

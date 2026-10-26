@@ -25,10 +25,22 @@ function filterButton(){
     if (filter){
         let checkbox = /*HTML*/ `
         <section id="test">
-            <input type="checkbox">Pris Lav
-            <input type="checkbox">Pris Høy
-            <input type="checkbox">Ny - Eldst
-            <input type="checkbox">Eldst - Ny
+            <p>Pris:</p>
+            <input type="radio" 
+            name="price"
+            value="low"
+            
+            >Pris Lav
+            <input type="radio" 
+            onchange="sortHomeHighPrice()"
+            name="price"
+            value="high"
+            >Pris Høy
+
+
+            <p>Dato:</p>
+            <input type="radio">Ny - Eldst
+            <input type="radio">Eldst - Ny
         </section>    
         `
         let buttons = /*HTML*/ `
@@ -57,6 +69,7 @@ function generateProductHome(){
             item.title.toLowerCase().includes(search.toLowerCase())
         )
     }
+    
 
     for (let i = 0; i < list.length; i++){
         html += /*HTML*/ `
@@ -65,6 +78,7 @@ function generateProductHome(){
                 src="${list[i].img}">
                 <div>${list[i].title}</div>
                 <div>${list[i].artist}</div>
+                <div>${list[i].price},- kr.</div>
     
             </section>
             <br>
