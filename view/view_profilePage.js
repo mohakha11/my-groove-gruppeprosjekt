@@ -24,7 +24,7 @@ function profilePage() {
     <div class="carousel-container">
         <h3>favoritter</h3>
         <div class="carousel-row">
-            <button>&gt;</button>
+            <button>&lt;</button>
             <div class="carousel-images">
                 <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
                 <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
@@ -38,7 +38,7 @@ function profilePage() {
     <div class="carousel-container">
         <h3>Samling</h3>
         <div class="carousel-row">
-            <button>&gt;</button>
+            <button>&lt;</button>
             <div class="carousel-images">
                 <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
                 <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">

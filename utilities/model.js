@@ -15,7 +15,7 @@ const model = {
         },
         productPage: {
             currentProductID: null,
-            selectedAmount: null,
+            selectedAmount: 1,
         },
         orderPage: {
             customer: {
@@ -64,7 +64,8 @@ const model = {
                 },
             },
         },
-        cart: [{productID: null, amount: null},],
+        //cart: [{productID: null, amount: null},],
+        cart:[]
     },
     
     format: [
