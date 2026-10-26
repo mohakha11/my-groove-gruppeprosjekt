@@ -14,7 +14,11 @@ function updateView(){
                 <div>Kontakt oss på epost
                 <img src="https://mygroove.no/wp-content/uploads/myGroove-logo-1.png.webp"
                 alt="Logo her">
-                <img alt="Profilbilde">
+                <abbr title="Profil"><img src="img/placeholder-profile.png" 
+                alt="Profilbilde"
+                id="profileBtn"
+                onclick="changePage('profilePage')"
+                ></abbr>
                 </div>
 
                 <button onclick="changePage('landingPage')">HomePage</button>
