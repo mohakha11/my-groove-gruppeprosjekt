@@ -1,5 +1,4 @@
 function cartPage(){
-    
     let html = /*HTML*/`
     <button>Tilbake</button>
         <div id="cart-container">
@@ -27,26 +26,35 @@ function cartPage(){
 }
 
 function showProductsCart(){
-    let html = /*HTML*/ `
-    <section class="cartItem">
-        <img class="previewimg" 
-        src="${model.productsData[0].img}">
-        
-        <div>
-            <div>${model.productsData[0].title}, ${model.productsData[0].artist}</div>
-            <div>${model.productsData[0].label}</div>
-            <div>${model.productsData[0].year}</div>
-            <div>Antall: 1</div>
-            <section>
-                <div>${model.productsData[0].price} kr.
-                <button>Fjern</button></div>
-            </section>
-        </div>
-    </section>
-    
-    `
-    return html
+    let html = ''
+    let cart = model.viewState.cart
 
+    if (cart.length < 1) html = /*HTML*/ `<div>Handlekurven er tom</div>`
+    else {
+        for (let cartItem = 0; cartItem < cart.length; cartItem ++) {
+            for (let product of model.productsData){
+                if (cart[cartItem].productID === product.id){
+                    html += /*HTML*/ ` 
+                    <section class="cartItem">
+                        <img class="previewimg" 
+                        src="${product.img}">
+
+                        <div>
+                            <div>${product.title}, ${model.productsData[0].artist}</div>
+                            <div>${product.label}</div>
+                            <div>${product.year}</div>
+                            <div>Antall: ${cart[cartItem].amount}</div>
+                            <section>
+                                <div>${product.price} kr.
+                                <button
+                                onclick="removeCartItem(${product})"
+                                >Fjern</button></div>
+                            </section>
+                        </div>
+                    </section>`
+                }}}
+    }
+    return html
 }
 
 function payPage(){
