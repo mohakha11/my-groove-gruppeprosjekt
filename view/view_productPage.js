@@ -44,7 +44,8 @@ function productPage() {
         <section id="commentSection">
         <div>
             <img src="img/placeholder-profile.png">
-            <input placeholder="legg til kommentar">
+            <input placeholder="Skriv kommentar">
+            <button>Post kommentar</button>
         </div>
         
         <div>
