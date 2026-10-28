@@ -1,6 +1,7 @@
 function addToCart(productID){
     let cart = model.viewState.cart 
     cart.push({productID: productID, amount: model.viewState.productPage.selectedAmount})
+    model.viewState.productPage.selectedAmount = 1;
 }
 
 
