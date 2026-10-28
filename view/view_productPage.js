@@ -10,10 +10,11 @@ function productPage() {
   }
 
   let html = /*HTML*/ `
+        <section id="productInfoSection">      
         <div>
             <img src="${product.img}">
             <div>★★★★☆</div>
-            <button>Kommentarer</button>
+            <button><a href="#commentSection">Kommentarer</a></button>
         </div>
 
         <div>
@@ -38,10 +39,13 @@ function productPage() {
             <p>${product.price},-</p>
             <p>□ På lager</p>
         </div>
+        </section>
 
+        <section id="commentSection">
         <div>
             <img src="img/placeholder-profile.png">
-            <input placeholder="legg til kommentar">
+            <input placeholder="Skriv kommentar">
+            <button>Post kommentar</button>
         </div>
         
         <div>
@@ -62,6 +66,7 @@ function productPage() {
             <p>3.12.2020 ★★☆☆☆</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
+        </section>
 
     
     `;
