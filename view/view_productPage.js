@@ -1,5 +1,4 @@
 function productPage() {
-  let amount = model.viewState.productPage.selectedAmount  
   let currentProduct = model.viewState.productPage.currentProductID;
   let product = {};
 
@@ -9,6 +8,7 @@ function productPage() {
       break;
     }
   }
+
 
   let html = /*HTML*/ `
         <div>
@@ -28,12 +28,12 @@ function productPage() {
                 <button
                 onclick="setCartAmount('sub')"
                 >&lt;</button>
-                <p id="cartAmount">${amount}</p>
+                <p id="cartAmount">${model.viewState.productPage.selectedAmount}</p>
                 <button
                 onclick="setCartAmount('add')"
                 >&gt;</button>
             </p>
-            <button onclick="addToCart(${currentProduct}, ${amount})">Legg til handlekurv</button>
+            <button onclick="addToCart(${currentProduct})">Legg til handlekurv</button>
 
         <div>
             <p>${product.price},-</p>

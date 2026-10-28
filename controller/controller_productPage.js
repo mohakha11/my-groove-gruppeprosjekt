@@ -1,7 +1,6 @@
-function addToCart(productID, amount){
+function addToCart(productID){
     let cart = model.viewState.cart 
-    cart.push({productID: productID, amount: amount})
-    console.log(cart) //amount kommer opp som 1 uansett, må fikses
+    cart.push({productID: productID, amount: model.viewState.productPage.selectedAmount})
 }
 
 
