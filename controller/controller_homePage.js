@@ -3,6 +3,12 @@ function showFilterLanding(){
     updateView()
 }
 
+function searchCategory(category){
+    model.viewState.homePage.category = category 
+    homePage()
+    updateView()
+}
+
 function sortHomeSearch(value, type){
     let list = model.viewState.homePage.searchResult
     switch (type) {
@@ -16,3 +22,4 @@ function sortHomeSearch(value, type){
 
     document.querySelector('#searchResult').innerHTML = generateProductList(list)
 }
+

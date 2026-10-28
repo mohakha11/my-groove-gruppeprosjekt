@@ -2,23 +2,61 @@
 function homePage(){
     let html = /*HTML*/ `
         <section id="category">
-            <div>Vinyl</div>
-            <div>CD</div>
-            <div>Kassett</div>
-            <div>Nyheter</div>
-        </section> 
-        <section>
+            <div 
+            class="category-btn"
+            onclick="searchCategory('alt')">Hele butikken</div>
+            <div 
+            class="category-btn"
+            onclick="searchCategory('vinyl')">Vinyl</div>
+            <div 
+            class="category-btn"
+            onclick="searchCategory('cd')">CD</div>
+            <div 
+            class="category-btn"
+            onclick="searchCategory('kassett')">Kassett</div>
+            <div 
+            class="category-btn"
+            onclick="searchCategory('nyheter')">Nyheter</div>
+        </section>
+
+        <section id="show-category">
             <button onclick="showFilterLanding()">
             Avansert søk</button>
-            <input placeholder="Søk"
-            onchange="searchProductHome(this.value)"
-            >
+            <div>${showHomeCategory()}</div>
         </section>
+
         <div>${filterButton()}</div>
         <div id="searchResult">${generateProductHome()}</div>
     `
     return html
 }
+
+function showHomeCategory(){
+    let html = ''
+    let category = model.viewState.homePage.category
+    if (category === 'alt') html = /*HTML*/ `
+        <input placeholder="Søk i butikken"
+        onchange="searchProductHome(this.value)">
+    ` 
+    if (category === 'vinyl') html = /*HTML*/ `
+        <input placeholder="Søk i vinyl"
+        onchange="searchProductHome(this.value)">
+    ` 
+    if (category === 'cd') html = /*HTML*/ `
+        <input placeholder="Søk i CD'er"
+        onchange="searchProductHome(this.value)">
+    `
+    if (category === 'kassett') html = /*HTML*/ `
+        <input placeholder="Søk i kassetter"
+        onchange="searchProductHome(this.value)">
+    `
+    if (category === 'nyheter') html = /*HTML*/ `
+        <div>Nyheter kommer her!</div>
+    `
+
+    return html
+}
+
 
 function filterButton(){
     const filter = model.viewState.homePage.advanced

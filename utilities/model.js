@@ -5,7 +5,7 @@ const model = {
     },
     viewState: {
         homePage: {
-            category: null, //VINYL CD KASSETT NYHETER
+            category: 'alt', //VINYL CD KASSETT NYHETER
             search: null,
             searchResult: [],
             advanced: false,

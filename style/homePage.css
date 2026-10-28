@@ -4,7 +4,14 @@
 
 #category {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #cacaca;
+    text-align: center;
+}
+.category-btn:hover{
+    background-color: #646464;
+    color: white;
+    cursor: pointer
 }
 
 #searchResult {
