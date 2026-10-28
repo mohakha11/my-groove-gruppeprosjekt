@@ -9,7 +9,6 @@ function productPage() {
     }
   }
 
-
   let html = /*HTML*/ `
         <div>
             <img src="${product.img}">
