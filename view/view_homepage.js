@@ -105,15 +105,23 @@ function filterButton(){
 }
 
 function generateProductHome(){
+    let list = []
     const search = model.viewState.homePage.search
-    let list = model.viewState.homePage.searchResult
     if (search === null) return ''
     if (search !== null){
-        model.viewState.homePage.searchResult = model.productsData.filter(item => 
-            item.label.toLowerCase().includes(search.toLowerCase()) ||
-            item.artist.toLowerCase().includes(search.toLowerCase()) ||
-            item.title.toLowerCase().includes(search.toLowerCase())
-        )
+        switch (model.viewState.homePage.category){
+            case 'alt':
+                list = searchAll()
+            case 'vinyl':
+                list = searchVinyl()
+        }
+        //model.viewState.homePage.searchResult = model.productsData.filter(item => 
+        //    item.label.toLowerCase().includes(search.toLowerCase()) ||
+        //    item.artist.toLowerCase().includes(search.toLowerCase()) ||
+        //    item.title.toLowerCase().includes(search.toLowerCase())
+        //)
+
+
     }
 
     return generateProductList(list)

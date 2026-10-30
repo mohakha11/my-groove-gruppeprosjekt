@@ -11,3 +11,10 @@
         font-size: 18px;
         cursor: pointer;
     }
+
+
+.header {
+     display: flex;
+     justify-content: space-around;
+     
+}

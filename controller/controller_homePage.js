@@ -23,3 +23,30 @@ function sortHomeSearch(value, type){
     document.querySelector('#searchResult').innerHTML = generateProductList(list)
 }
 
+
+
+function searchAll(){
+    let search = model.viewState.homePage.search
+    return model.viewState.homePage.searchResult = model.productsData.filter(item => 
+            item.label.toLowerCase().includes(search.toLowerCase()) ||
+            item.artist.toLowerCase().includes(search.toLowerCase()) ||
+            item.title.toLowerCase().includes(search.toLowerCase())
+        )
+}
+
+function searchVinyl(){
+    let search = model.viewState.homePage.search
+    let category = model.viewState.homePage.category
+    model.viewState.homePage.searchResult = model.productsData.filter(item => item.formatID.toLowerCase() === category)
+    console.log(model.viewState.homePage.searchResult)
+
+}
+
+
+function searchCD(){
+    
+}
+
+function searchCassette(){
+    
+}
