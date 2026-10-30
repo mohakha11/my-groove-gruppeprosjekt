@@ -27,12 +27,11 @@ function sortHomeSearch(value, type){
 
 function searchAll(){
     let search = model.viewState.homePage.search
-    let result = model.viewState.homePage.searchResult = model.productsData.filter(item => 
+    return model.viewState.homePage.searchResult = model.productsData.filter(item => 
             item.label.toLowerCase().includes(search.toLowerCase()) ||
             item.artist.toLowerCase().includes(search.toLowerCase()) ||
             item.title.toLowerCase().includes(search.toLowerCase())
         )
-        return result
 }
 
 function searchVinyl(){
