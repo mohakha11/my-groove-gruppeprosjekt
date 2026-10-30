@@ -1,6 +1,6 @@
-
 function homePage(){
-    let html = /*HTML*/ `
+    let category = model.viewState.homePage.category
+    let buttons = /*HTML*/ `
         <section id="category">
             <div 
             class="category-btn"
@@ -24,10 +24,17 @@ function homePage(){
             Avansert søk</button>
             <div>${showHomeCategory()}</div>
         </section>
-
+        `
+    let advancedFilter = ''
+    if (category !== 'nyheter') {
+        advancedFilter = /*HTML*/` 
         <div>${filterButton()}</div>
         <div id="searchResult">${generateProductHome()}</div>
-    `
+        `
+    } 
+
+    let html = buttons + advancedFilter
+    
     return html
 }
 
@@ -105,21 +112,30 @@ function filterButton(){
 }
 
 function generateProductHome(){
-    const search = model.viewState.homePage.search
-    let list = model.viewState.homePage.searchResult
+    let list = []
+    let search = model.viewState.homePage.search
     if (search === null) return ''
     if (search !== null){
-        model.viewState.homePage.searchResult = model.productsData.filter(item => 
-            item.label.toLowerCase().includes(search.toLowerCase()) ||
-            item.artist.toLowerCase().includes(search.toLowerCase()) ||
-            item.title.toLowerCase().includes(search.toLowerCase())
-        )
+        switch (model.viewState.homePage.category){
+            case 'alt':
+                list = searchAll()
+                break;
+            case 'vinyl':
+                list = searchVinyl()
+                break;
+        }
+        //model.viewState.homePage.searchResult = model.productsData.filter(item => 
+        //    item.label.toLowerCase().includes(search.toLowerCase()) ||
+        //    item.artist.toLowerCase().includes(search.toLowerCase()) ||
+        //    item.title.toLowerCase().includes(search.toLowerCase())
+        //)
     }
 
     return generateProductList(list)
 }
 
 function generateProductList(list) {
+    console.log(list)
     let html = ''
     for (let i = 0; i < list.length; i++){
         html += /*HTML*/ `
