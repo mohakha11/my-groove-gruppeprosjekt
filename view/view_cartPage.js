@@ -11,7 +11,7 @@ function cartPage(){
                 <h2>Oppsummering</h2>
                 <p>Eksempel: Bestilling kan hentes i butikk opp til en uke etter betaling.</p>
                 <br>
-                <p>Subtotal: 750kr</p>
+                <p>Subtotal: ${totalPriceProducts()}</p>
                 <p>Medlemsrabatt: - 80kr</p>
                 <p>Mva: 50kr</p>
                 <p><u>Total: 720kr</u></p>
@@ -45,7 +45,7 @@ function showProductsCart(){
                             <div>${product.year}</div>
                             <div>Antall: ${cart[cartItem].amount}</div>
                             <section>
-                                <div>${product.price} kr.
+                                <div>${product.price * cart[cartItem].amount} kr.
                                 <button
                                 onclick="removeCartItem(${[cartItem]})"
                                 >Fjern</button></div>
