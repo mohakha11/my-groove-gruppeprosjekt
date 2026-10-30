@@ -21,3 +21,32 @@ function totalPriceProducts(){
     }
     return price
 }
+
+function totalDiscount(){
+    let discount = 0;
+    const currentUser = model.app.loggedInUserId
+    const users = model.usersProfile
+    if (!currentUser) return "Du er ikke logget inn"
+    for (let i of users) {
+        if (i.userID === currentUser){
+            switch (i.userRole){
+                case 3:
+                    discount = totalPriceProducts() * 0.10
+                    break;
+            }
+        }
+    }
+    return "- " + discount.toLocaleString() + " kr."
+}
+
+function totalTax(){
+    let amount = 0;
+    let tax = 0;
+    const cart = model.viewState.cart
+    for (let i of cart) {
+        amount += i.amount 
+    }
+    tax = amount * 0.25
+
+    return tax
+}

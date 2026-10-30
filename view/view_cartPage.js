@@ -11,9 +11,9 @@ function cartPage(){
                 <h2>Oppsummering</h2>
                 <p>Eksempel: Bestilling kan hentes i butikk opp til en uke etter betaling.</p>
                 <br>
-                <p>Subtotal: ${totalPriceProducts()}</p>
-                <p>Medlemsrabatt: - 80kr</p>
-                <p>Mva: 50kr</p>
+                <p>Subtotal: ${totalPriceProducts().toLocaleString()} kr.</p>
+                <p>Medlemsrabatt: ${totalDiscount().toLocaleString()}</p>
+                <p>Mva: ${totalTax().toLocaleString()} kr.</p>
                 <p><u>Total: 720kr</u></p>
 
                 <button id="payBtn"
