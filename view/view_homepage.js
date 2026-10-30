@@ -1,4 +1,3 @@
-
 function homePage(){
     let category = model.viewState.homePage.category
     let buttons = /*HTML*/ `
@@ -114,28 +113,29 @@ function filterButton(){
 
 function generateProductHome(){
     let list = []
-    const search = model.viewState.homePage.search
+    let search = model.viewState.homePage.search
     if (search === null) return ''
     if (search !== null){
         switch (model.viewState.homePage.category){
             case 'alt':
                 list = searchAll()
+                break;
             case 'vinyl':
                 list = searchVinyl()
+                break;
         }
         //model.viewState.homePage.searchResult = model.productsData.filter(item => 
         //    item.label.toLowerCase().includes(search.toLowerCase()) ||
         //    item.artist.toLowerCase().includes(search.toLowerCase()) ||
         //    item.title.toLowerCase().includes(search.toLowerCase())
         //)
-
-
     }
 
     return generateProductList(list)
 }
 
 function generateProductList(list) {
+    console.log(list)
     let html = ''
     for (let i = 0; i < list.length; i++){
         html += /*HTML*/ `
