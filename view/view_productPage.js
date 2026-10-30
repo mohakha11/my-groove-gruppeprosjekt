@@ -44,8 +44,8 @@ function productPage() {
         <section id="commentSection">
         <div>
             <img src="img/placeholder-profile.png">
-            <input placeholder="Skriv kommentar">
-            <button>Post kommentar</button>
+            <input type="text" placeholder="Skriv kommentar" onchange=""/>
+            <button onclick="addComment()">Post kommentar</button>
         </div>
         
         <div>
@@ -73,3 +73,8 @@ function productPage() {
 
   return html;
 }
+
+// function addComment() {
+//   let html = "";
+//   for (let i = 0; i < model.userReview.comment.length; i++) {}
+// }

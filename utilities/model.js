@@ -1,11 +1,11 @@
 const model = {
     app: {
         currentPage: "landingPage",
-        loggedInUserId: null, //Bruker er ikke innlogget
+        loggedInUserId: 1, //Bruker er ikke innlogget = null
     },
     viewState: {
         homePage: {
-            category: 'alt', //VINYL CD KASSETT NYHETER
+            category: 'alt',
             search: null,
             searchResult: [],
             advanced: false,
@@ -64,8 +64,8 @@ const model = {
                 },
             },
         },
-        //cart: [{productID: null, amount: null},],
-        cart:[]
+        cart: [{productID: 1, amount: 2}, {productID: 2, amount: 1},],
+        //cart:[]
     },
     
     format: [
