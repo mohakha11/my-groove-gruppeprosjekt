@@ -1,6 +1,7 @@
 
 function homePage(){
-    let html = /*HTML*/ `
+    let category = model.viewState.homePage.category
+    let buttons = /*HTML*/ `
         <section id="category">
             <div 
             class="category-btn"
@@ -24,10 +25,17 @@ function homePage(){
             Avansert søk</button>
             <div>${showHomeCategory()}</div>
         </section>
-
+        `
+    let advancedFilter = ''
+    if (category !== 'nyheter') {
+        advancedFilter = /*HTML*/` 
         <div>${filterButton()}</div>
         <div id="searchResult">${generateProductHome()}</div>
-    `
+        `
+    } 
+
+    let html = buttons + advancedFilter
+    
     return html
 }
 
