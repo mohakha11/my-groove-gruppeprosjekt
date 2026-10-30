@@ -17,3 +17,15 @@
      display: flex;
      justify-content: space-around;
 }
+
+#cartBtn {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+
+}
+
+#logo {
+    height: 40px;
+    cursor: pointer;
+}

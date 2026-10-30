@@ -34,23 +34,14 @@ function searchAll(){
         )
 }
 
-function searchVinyl(){
+function searchCategories(){
     let search = model.viewState.homePage.search
     let category = model.viewState.homePage.category
-    let result = model.viewState.homePage.searchResult = model.productsData.filter(item => 
-            item.label.toLowerCase().includes(search.toLowerCase()) ||
-            item.artist.toLowerCase().includes(search.toLowerCase()) ||
-            item.title.toLowerCase().includes(search.toLowerCase())
-        )
-
-    console.log(result)
+    const list = model.productsData.filter(item => item.formatID.toLowerCase() === category)
+    return model.viewState.homePage.searchResult = list.filter(item => 
+        item.label.toLowerCase().includes(search.toLowerCase()) ||
+        item.artist.toLowerCase().includes(search.toLowerCase()) ||
+        item.title.toLowerCase().includes(search.toLowerCase())
+    )
 }
 
-
-function searchCD(){
-    
-}
-
-function searchCassette(){
-    
-}

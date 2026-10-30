@@ -114,28 +114,17 @@ function filterButton(){
 function generateProductHome(){
     let list = []
     let search = model.viewState.homePage.search
+    let category = model.viewState.homePage.category
     if (search === null) return ''
     if (search !== null){
-        switch (model.viewState.homePage.category){
-            case 'alt':
-                list = searchAll()
-                break;
-            case 'vinyl':
-                list = searchVinyl()
-                break;
-        }
-        //model.viewState.homePage.searchResult = model.productsData.filter(item => 
-        //    item.label.toLowerCase().includes(search.toLowerCase()) ||
-        //    item.artist.toLowerCase().includes(search.toLowerCase()) ||
-        //    item.title.toLowerCase().includes(search.toLowerCase())
-        //)
+        if (category === 'alt') list = searchAll()
+        else if (category !== 'alt' && category !== null) list = searchCategories()
     }
 
     return generateProductList(list)
 }
 
 function generateProductList(list) {
-    console.log(list)
     let html = ''
     for (let i = 0; i < list.length; i++){
         html += /*HTML*/ `

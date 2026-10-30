@@ -13,13 +13,15 @@ function updateView() {
                 <div class="header">
                     <div onclick="changePage('contactPage')">Kontakt oss</div>
                     <img onclick="changePage('landingPage')" src="https://mygroove.no/wp-content/uploads/myGroove-logo-1.png.webp"
-                    alt="Logo her">
+                    alt="Logo her"
+                    id="logo">
                     <abbr title="Profil"><img src="img/placeholder-profile.png" 
                     alt="Profilbilde"
                     id="profileBtn"
                     onclick="changePage('profilePage')"
                     ></abbr>
-                    <img onclick="changePage('cartPage')" src="img/placeholder_cart.png" alt="Handlekurv">
+                    <img onclick="changePage('cartPage')" src="img/placeholder_cart.png" 
+                    alt="Handlekurv"  id="cartBtn">
                 </div>
                 <div>
                     <!-- <button onclick="changePage('landingPage')">HomePage</button> -->
