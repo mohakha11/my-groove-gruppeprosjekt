@@ -13,7 +13,7 @@ function cartPage(){
                 <br>
                 <p>Subtotal: ${totalPriceProducts().toLocaleString()} kr.</p>
                 <p>Medlemsrabatt: ${totalDiscount().toLocaleString()}</p>
-                <p>Mva: ${totalTax().toLocaleString()} kr.</p>
+                <p>Mva: ${(totalPriceProducts() * 0.25).toLocaleString()} kr.</p>
                 <p><u>Total: 720kr</u></p>
 
                 <button id="payBtn"

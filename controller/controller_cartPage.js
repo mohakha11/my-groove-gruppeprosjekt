@@ -39,7 +39,4 @@ function totalDiscount(){
     return "- " + discount.toLocaleString() + " kr."
 }
 
-function totalTax(){
-   return totalPriceProducts() * 0.25 
 
-}
