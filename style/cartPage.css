@@ -5,7 +5,7 @@
     grid-template-columns: 2fr 1fr;
     gap: 30px;
     .cart{
-        border-right: solid black;
+        border-right: 1px solid #ddd;
         padding: 10px;
         
         h2{
