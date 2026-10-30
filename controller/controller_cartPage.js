@@ -40,13 +40,6 @@ function totalDiscount(){
 }
 
 function totalTax(){
-    let amount = 0;
-    let tax = 0;
-    const cart = model.viewState.cart
-    for (let i of cart) {
-        amount += i.amount 
-    }
-    tax = amount * 0.25
+   return totalPriceProducts() * 0.25 
 
-    return tax
 }
