@@ -40,3 +40,6 @@ function totalDiscount(){
 }
 
 
+function totalPriceAll(){
+    return (totalPriceProducts() - totalDiscount())
+}

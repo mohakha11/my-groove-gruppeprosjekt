@@ -128,7 +128,7 @@ const model = {
             firstName: 'Geir',
             lastName: 'Sollid',
             userRole: 3,
-            online: false,
+            online: 'Pålogget',
             registerDate: '10.10.2026',
             lastOnline: '16.10.2026',
             contributions: 42, 

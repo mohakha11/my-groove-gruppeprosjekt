@@ -14,7 +14,7 @@ function cartPage(){
                 <p>Subtotal: ${totalPriceProducts().toLocaleString()} kr.</p>
                 <p>Medlemsrabatt: ${totalDiscount().toLocaleString()}</p>
                 <p>Mva: ${(totalPriceProducts() * 0.25).toLocaleString()} kr.</p>
-                <p><u>Total: 720kr</u></p>
+                <p><u>Total: ${totalPriceAll()}kr.</u></p>
 
                 <button id="payBtn"
                 onclick="goToPayPage()">Gå til betaling</button>
