@@ -12,7 +12,7 @@ function updateView() {
             <section>
                 <div class="header">
                     <div onclick="changePage('contactPage')">Kontakt oss</div>
-                    <img onclick="changePage('landingPage')" src="https://mygroove.no/wp-content/uploads/myGroove-logo-1.png.webp"
+                    <img onclick="changePage('landingPage')" src="img/headerlogo.webp"
                     alt="Logo her">
                     <abbr title="Profil"><img src="img/placeholder-profile.png" 
                     alt="Profilbilde"
