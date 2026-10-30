@@ -1,29 +1,80 @@
-#test {
-    display: grid;
-} 
 
+
+/* ==========================================
+   1. Kategoribar (#category)
+   ========================================== */
 #category {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background-color: #cacaca;
-    text-align: center;
-}
-.category-btn:hover{
-    background-color: #646464;
-    color: white;
-    cursor: pointer
+  display: flex;
+  background-color: #e6e6e6;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto 10px auto;
 }
 
-#searchResult {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 20px;
+.category-btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-#profileBtn{
-    height: 60px;
-    width: 60px;
-    cursor: pointer;
-    
+.category-btn:hover {
+  background-color: #dadada;
+}
+
+/* ==========================================
+   2. Søkefelt og Avansert søk-knapp (#show-category)
+   ========================================== */
+#show-category {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: transparent; /* Fjerner den grå bakgrunnen helt */
+  padding: 0;                     /* Fjerner padding rundt */
+}
+
+/* Avansert søk-knapp til venstre */
+#show-category button {
+  background-color: #e6e6e6;
+  border: 1px solid #b0b0b0;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#show-category button:hover {
+  background-color: #dadada;
+}
+
+/* Div-en som omslutter input fyller resten av plassen */
+#show-category > div {
+  flex: 1;
+  display: flex;
+}
+
+/* Selve søkefeltet som strekker seg lang-flat ut over hele bredden */
+#show-category input {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #b0b0b0;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+#show-category input:focus {
+  border-color: #333;
 }
 

@@ -1,31 +1,65 @@
-.product{
-    height: 150px;
-    width: 200px;
-    text-align: center;
-    transition:
-        font-size 1s;
-    
+/* Header-beholderen */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;                 /* Fyller hele bredden av skjermen */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;           /* Trekker den ut over body-paddingen til venstre */
+    margin-right: -50vw;          /* Trekker den ut over body-paddingen til høyre */
+    margin-top: -3.5rem;          /* Fjerner tomrommet helt øverst */
+    margin-bottom: 30px;
+    padding: 15px 40px;           /* Litt god plass på sidene for innholdet */
+    background-color: var(--code-bg);
+    border-bottom: 1px solid var(--border); /* Valgfritt: bare ramme under hvis du vil */
+    border-radius: 0;             /* Fjerner runde hjørner så den dekker helt ut */
 }
 
-.product:hover{
-        font-size: 18px;
-        cursor: pointer;
-    }
+/* 1. Venstre sone (Kontakt oss) */
+.header-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
 
+/* 2. Midtre sone (Logoen havner helt i midten) */
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
 
-.header {
-     display: flex;
-     justify-content: space-around;
+/* 3. Høyre sone (Profil / Handlekurv) */
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px; /* Avstand mellom profil og handlekurv */
+}
+
+/* Størrelser på ikoner og logo */
+#logo {
+  height: 50px;
+  cursor: pointer;
+  object-fit: contain;
 }
 
 #cartBtn {
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
 }
 
-#logo {
-    height: 40px;
-    cursor: pointer;
+
+
+
+
+
+
+
+html {
+  overflow-y: scroll;
 }
