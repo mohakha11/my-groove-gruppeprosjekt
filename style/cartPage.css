@@ -2,11 +2,11 @@
     margin: 20px;
     display: grid;
     
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 60% 30%;
     gap: 30px;
     .cart{
-        border-right: 1px solid #ddd;
         padding: 10px;
+        gap: 20px;
         
         h2{
             text-decoration: underline;

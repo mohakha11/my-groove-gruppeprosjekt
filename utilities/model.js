@@ -64,8 +64,8 @@ const model = {
                 },
             },
         },
-        //cart: [{productID: null, amount: null},],
-        cart:[]
+        cart: [{productID: 3, amount: 1},],
+        //cart:[]
     },
     
     format: [

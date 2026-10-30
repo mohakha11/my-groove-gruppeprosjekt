@@ -11,7 +11,7 @@ function searchProductHome(search) {
 
 function testProduct() {
   const geirVinyl = {
-    id: 2,
+    id: 1,
     title: "Nøkkelkompetanse",
     img: "img/cover_nøkkelkompetanse.png",
     formatID: "Vinyl", //placeholder
@@ -23,7 +23,7 @@ function testProduct() {
     updated: "16.10.2026",
   };
   const beckaKassett = {
-    id: 3,
+    id: 2,
     title: "ForLoop",
     img: "img/cover_beckasbaguetter.png",
     formatID: "Kassett", //placeholder
@@ -35,7 +35,7 @@ function testProduct() {
     updated: "30.10.2026",
   };
   const terjeCD = {
-    id: 4,
+    id: 3,
     title: "ChatGPT",
     img: "img/cover_chatgpt.png",
     formatID: "CD", //placeholder

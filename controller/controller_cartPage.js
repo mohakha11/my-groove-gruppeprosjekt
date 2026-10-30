@@ -3,7 +3,8 @@ function goToPayPage() {
     updateView()
 }
 
-function removeCartItem(item, index){
-    console.log(item)
-    console.log(index)
+function removeCartItem(item){
+    model.viewState.cart.splice(item, 1)
+    updateView()
+
 }

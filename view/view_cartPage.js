@@ -2,7 +2,7 @@ function cartPage(){
     let html = /*HTML*/`
     <button>Tilbake</button>
         <div id="cart-container">
-            <section class="cart">
+            <section class="cart" style="border-right: 1px solid #ddd;">
                 <h2>Handlekurv</h2>
                 <div>${showProductsCart()}</div>
             </section>
@@ -47,12 +47,13 @@ function showProductsCart(){
                             <section>
                                 <div>${product.price} kr.
                                 <button
-                                onclick="removeCartItem(${product})"
+                                onclick="removeCartItem(${[cartItem]})"
                                 >Fjern</button></div>
                             </section>
                         </div>
                     </section>`
-                }}}
+                }
+            }}
     }
     return html
 }
