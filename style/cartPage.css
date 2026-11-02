@@ -24,6 +24,7 @@
 .previewimg{
     height: 100px;
     width: 150px;
+    cursor: pointer;
 }
 
 .cartItem {

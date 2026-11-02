@@ -30,13 +30,13 @@ function profilePage(){
             </div>
             
           <div class="profile-text-details">
-            <p>Rolle: ${user.userRole}</p> <!-- må ha template literal -->
-            <p>Status: ${user.online}</p> <!-- må ha template literal -->
-            <p>Med siden: ${user.registerDate}</p> <!-- må ha template literal -->
-            <p>Sist online: ${user.lastOnline}</p> <!-- må ha template literal -->
+            <p>Rolle: ${user.userRole}</p>
+            <p>Status: ${user.online}</p>
+            <p>Med siden: ${user.registerDate}</p>
+            <p>Sist online: ${user.lastOnline}</p>
           </div>
 
-          <button onclick="goToEdit()">Rediger profil</button> <!--Åpner instillingside med kundepreferanser-->
+          <button onclick="goToEdit()">Rediger profil</button>
         </div>
     </section> 
 
@@ -47,10 +47,7 @@ function profilePage(){
             <div class="carousel-row">
             <button>&lt;</button>
                 <div class="carousel-images">
-                    <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-                    <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-                    <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-                    <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
+                    <div>${getCollections('fav')}</div>
                 </div>
             <button>&gt;</button>
             </div>
@@ -61,9 +58,7 @@ function profilePage(){
             <div class="carousel-row">
             <button>&lt;</button>
                 <div class="carousel-images">
-                    <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-                    <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
-                    <img class="collection-IMG" src="img/placeholder-product.png" alt="Produktbilde">
+                    <div>${getCollections('collect')}</div>
                 </div>
             <button>&gt;</button>
         </div>
@@ -71,4 +66,38 @@ function profilePage(){
   </div>`
 
   return html;
+}
+
+function getCollections(type){
+    const products = model.productsData
+    const currentUser = findLoggedInUser()
+    let images = ''
+    switch (type) {
+        case "fav":
+            for (let product of products) {
+                if (currentUser.favorites.includes(product.id)){
+                    images += /*HTML*/ `
+                    <img src="${product.img}"
+                    class="collection-IMG"
+                    onclick="goToProductPage(${product.id})">
+                    `
+                } else if (currentUser.favorites.length < 1){
+                    return "Du har ikke lagt til noen favoritter enda"
+                }
+            }
+
+        case "collect":
+            for (let product of products) {
+                if (currentUser.collection.includes(product.id)){
+                    images += /*HTML*/ `
+                    <img src="${product.img}"
+                    class="collection-IMG"
+                    onclick="goToProductPage(${product.id})">
+                    `
+                } else if (currentUser.collection.length < 1){
+                    return "Du har ikke lagt til noe i samligen din enda"
+                }
+            }  
+        return images
+    }
 }
