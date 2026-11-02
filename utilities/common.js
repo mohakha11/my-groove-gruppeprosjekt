@@ -9,6 +9,16 @@ function searchProductHome(search) {
   updateView();
 }
 
+function findLoggedInUser(){
+    const currentUser = model.app.loggedInUserId
+    const users = model.usersProfile
+    for (let i of users) {
+        if (i.userID === currentUser) return i
+        else return ''
+    }
+}
+
+
 function testProduct() {
   const geirVinyl = {
     id: 1,

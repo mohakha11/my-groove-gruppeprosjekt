@@ -17,14 +17,14 @@ function updateView() {
                     <abbr title="Startside"><img onclick="changePage('landingPage')" src="img/headerlogo.webp"
                     alt="Logo her"
                     id="logo"></abbr>
+                    <abbr title="Handlekurv"><img onclick="changePage('cartPage')" src="img/placeholder_cart.png" 
+                    alt="Handlekurv"  id="cartBtn"></abbr>
                     <abbr title="Profil"><img src="img/placeholder-profile.png" 
                     alt="Profilbilde"
                     id="profileBtn"
                     style="cursor: pointer"
                     onclick="changePage('profilePage')"
                     ></abbr>
-                    <abbr title="Handlekurv"><img onclick="changePage('cartPage')" src="img/placeholder_cart.png" 
-                    alt="Handlekurv"  id="cartBtn"></abbr>
                 </div>
             </section>
         </header>
