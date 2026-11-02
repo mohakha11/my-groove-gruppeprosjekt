@@ -7,6 +7,7 @@ function updateView() {
   else if (model.app.currentPage === 'edit') loadedPage = profilePageEdit();
   else if (model.app.currentPage === "cartPage") loadedPage = cartPage();
   else if (model.app.currentPage === "payPage") loadedPage = payPage();
+  else if (model.app.currentPage === "contactPage") loadedPage = contactPage();
 
   let header = /*HTML*/ `
         <header>
