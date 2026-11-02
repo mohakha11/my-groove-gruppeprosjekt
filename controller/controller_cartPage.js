@@ -39,7 +39,6 @@ function totalDiscount(){
     return discount
 }
 
-
 function totalPriceAll(){
     return (totalPriceProducts() - totalDiscount() + (totalPriceProducts() * 0.25))
 }

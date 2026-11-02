@@ -67,19 +67,28 @@ function payPage(){
 
             <div>
                 <p>Fornavn:</p>
-                <input type="text" value="${findLoggedInUser().firstName}">
+                <input type="text" 
+                placeholder="Kari"
+                value="${findLoggedInUser().firstName}">
             </div>
             <div>
                 <p>Etternavn:</p>
-                <input type="text" value="${findLoggedInUser().lastName}">
+                <input type="text" 
+                placeholder="Nordmann"
+                value="${findLoggedInUser().lastName}">
             </div>
             <div>
                 <p>Telefon nummer:</p>
-                <input type="text">
+                <input type="text"
+                placeholder="555 55 555"
+                value="${findLoggedInUser().phoneNumber}"
+                >
             </div>
             <div>
                 <p>E-post:</p>
-                <input type="text">
+                <input type="text"
+                placeholder="nkari_80@eksempel.no"
+                value="${findLoggedInUser().email}">
             </div>
         </section>
 
@@ -98,6 +107,15 @@ function payPage(){
 
         <section>
             <h3>Velg betalingsmetode</h3>
+            <section>
+                <input type="radio" name="paymethod">Bankkort
+                <br>
+                <input type="radio" name="paymethod">Vipps
+            </section>
+            <br>
+            <div>Totalpris: ${totalPriceAll().toLocaleString()} kr.</div>
+            <button>Fullfør betaling</button>
+
         </section>
     
     </div>
