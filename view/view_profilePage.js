@@ -19,7 +19,6 @@ function profilePageEdit() {
 
 function profilePage(){
   let user = findLoggedInUser()
-  
   let html = /*HTML*/ `
   <div class="profile-page">
 
