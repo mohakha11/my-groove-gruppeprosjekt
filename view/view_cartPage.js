@@ -12,9 +12,9 @@ function cartPage(){
                 <p>Eksempel: Bestilling kan hentes i butikk opp til en uke etter betaling.</p>
                 <br>
                 <p>Subtotal: ${totalPriceProducts().toLocaleString()} kr.</p>
-                <p>Medlemsrabatt: ${totalDiscount().toLocaleString()}</p>
+                <p>Medlemsrabatt: ${totalDiscount().toLocaleString()} kr.</p>
                 <p>Mva: ${(totalPriceProducts() * 0.25).toLocaleString()} kr.</p>
-                <p><u>Total: ${totalPriceAll()}kr.</u></p>
+                <p><u>Total: ${totalPriceAll().toLocaleString()} kr.</u></p>
 
                 <button id="payBtn"
                 onclick="goToPayPage()">Gå til betaling</button>
@@ -67,19 +67,28 @@ function payPage(){
 
             <div>
                 <p>Fornavn:</p>
-                <input type="text">
+                <input type="text" 
+                placeholder="Kari"
+                value="${findLoggedInUser().firstName}">
             </div>
             <div>
                 <p>Etternavn:</p>
-                <input type="text">
+                <input type="text" 
+                placeholder="Nordmann"
+                value="${findLoggedInUser().lastName}">
             </div>
             <div>
                 <p>Telefon nummer:</p>
-                <input type="text">
+                <input type="text"
+                placeholder="555 55 555"
+                value="${findLoggedInUser().phoneNumber}"
+                >
             </div>
             <div>
                 <p>E-post:</p>
-                <input type="text">
+                <input type="text"
+                placeholder="nkari_80@eksempel.no"
+                value="${findLoggedInUser().email}">
             </div>
         </section>
 
@@ -98,6 +107,15 @@ function payPage(){
 
         <section>
             <h3>Velg betalingsmetode</h3>
+            <section>
+                <input type="radio" name="paymethod">Bankkort
+                <br>
+                <input type="radio" name="paymethod">Vipps
+            </section>
+            <br>
+            <div>Totalpris: ${totalPriceAll().toLocaleString()} kr.</div>
+            <button>Fullfør betaling</button>
+
         </section>
     
     </div>

@@ -26,7 +26,7 @@ function totalDiscount(){
     let discount = 0;
     const currentUser = model.app.loggedInUserId
     const users = model.usersProfile
-    if (!currentUser) return "Du er ikke logget inn"
+    if (!currentUser) return 0
     for (let i of users) {
         if (i.userID === currentUser){
             switch (i.userRole){
@@ -36,10 +36,9 @@ function totalDiscount(){
             }
         }
     }
-    return "- " + discount.toLocaleString() + " kr."
+    return discount
 }
 
-
 function totalPriceAll(){
-    return (totalPriceProducts() - totalDiscount())
+    return (totalPriceProducts() - totalDiscount() + (totalPriceProducts() * 0.25))
 }
