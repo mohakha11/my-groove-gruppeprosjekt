@@ -26,6 +26,12 @@
   background-color: #dadada;
 }
 
+#searchResult {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
 /* ==========================================
    2. Søkefelt og Avansert søk-knapp (#show-category)
    ========================================== */

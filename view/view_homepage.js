@@ -101,14 +101,8 @@ function filterButton() {
             Eldst - Ny
         </section>    
         `;
-    let buttons = /*HTML*/ `
-        <section class="filter-checks">
-            <button>Format</button>
-            <button>Sjanger</button>
-            <button>Plateselskap</button>
-        </section>
-        `;
-    html = checkbox + buttons;
+
+    html = checkbox;
     return html;
   } else {
     return "";
