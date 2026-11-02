@@ -128,6 +128,7 @@ const model = {
             img: '',
             userName: 'GeirS',
             email: 'geirsollid@getacademy.no',
+            phoneNumber: 12345678,
             firstName: 'Geir',
             lastName: 'Sollid',
             userRole: 3,

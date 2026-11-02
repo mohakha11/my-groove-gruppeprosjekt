@@ -12,9 +12,9 @@ function cartPage(){
                 <p>Eksempel: Bestilling kan hentes i butikk opp til en uke etter betaling.</p>
                 <br>
                 <p>Subtotal: ${totalPriceProducts().toLocaleString()} kr.</p>
-                <p>Medlemsrabatt: ${totalDiscount().toLocaleString()}</p>
+                <p>Medlemsrabatt: ${totalDiscount().toLocaleString()} kr.</p>
                 <p>Mva: ${(totalPriceProducts() * 0.25).toLocaleString()} kr.</p>
-                <p><u>Total: ${totalPriceAll()}kr.</u></p>
+                <p><u>Total: ${totalPriceAll().toLocaleString()} kr.</u></p>
 
                 <button id="payBtn"
                 onclick="goToPayPage()">Gå til betaling</button>
@@ -67,11 +67,11 @@ function payPage(){
 
             <div>
                 <p>Fornavn:</p>
-                <input type="text">
+                <input type="text" value="${findLoggedInUser().firstName}">
             </div>
             <div>
                 <p>Etternavn:</p>
-                <input type="text">
+                <input type="text" value="${findLoggedInUser().lastName}">
             </div>
             <div>
                 <p>Telefon nummer:</p>
