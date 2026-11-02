@@ -1,6 +1,6 @@
-function homePage(){
-    let category = model.viewState.homePage.category
-    let buttons = /*HTML*/ `
+function homePage() {
+  let category = model.viewState.homePage.category;
+  let buttons = /*HTML*/ `
         <section id="category">
             <div 
             class="category-btn"
@@ -19,10 +19,10 @@ function homePage(){
             onclick="searchCategory('nyheter')">Nyheter</div>
         </section>
 
-        `
-    let advancedFilter = ''
-    if (category !== 'nyheter') {
-        advancedFilter = /*HTML*/` 
+        `;
+  let advancedFilter = "";
+  if (category !== "nyheter") {
+    advancedFilter = /*HTML*/ ` 
         <section id="show-category">
             <button onclick="showFilterLanding()">
             Avansert søk</button>
@@ -30,46 +30,50 @@ function homePage(){
         </section>
         <div>${filterButton()}</div>
         <div id="searchResult">${generateProductHome()}</div>
-        `
-    } 
+        `;
+  }
 
-    let html = buttons + advancedFilter
-    
-    return html
+  let html = buttons + advancedFilter;
+
+  return html;
 }
 
-function showHomeCategory(){
-    let html = ''
-    let category = model.viewState.homePage.category
-    if (category === 'alt') html = /*HTML*/ `
+function showHomeCategory() {
+  let html = "";
+  let category = model.viewState.homePage.category;
+  if (category === "alt")
+    html = /*HTML*/ `
         <input placeholder="Søk i butikken"
         onchange="searchProductHome(this.value)">
-    ` 
-    if (category === 'vinyl') html = /*HTML*/ `
+    `;
+  if (category === "vinyl")
+    html = /*HTML*/ `
         <input placeholder="Søk i vinyl"
         onchange="searchProductHome(this.value)">
-    ` 
-    if (category === 'cd') html = /*HTML*/ `
+    `;
+  if (category === "cd")
+    html = /*HTML*/ `
         <input placeholder="Søk i CD'er"
         onchange="searchProductHome(this.value)">
-    `
-    if (category === 'kassett') html = /*HTML*/ `
+    `;
+  if (category === "kassett")
+    html = /*HTML*/ `
         <input placeholder="Søk i kassetter"
         onchange="searchProductHome(this.value)">
-    `
-    if (category === 'nyheter') html = /*HTML*/ `
+    `;
+  if (category === "nyheter")
+    html = /*HTML*/ `
         <div>Nyheter kommer her!</div>
-    `
+    `;
 
-    return html
+  return html;
 }
 
-
-function filterButton(){
-    const filter = model.viewState.homePage.advanced
-    if (filter){
-        let checkbox = /*HTML*/ `
-        <section id="test">
+function filterButton() {
+  const filter = model.viewState.homePage.advanced;
+  if (filter) {
+    let checkbox = /*HTML*/ `
+        <section class="filter-checks">
             <b>Pris:</b>
             <input type="radio" 
             name="price"
@@ -96,38 +100,38 @@ function filterButton(){
             onchange="sortHomeSearch(this.value, 'date')">
             Eldst - Ny
         </section>    
-        `
-        let buttons = /*HTML*/ `
-        <section>
+        `;
+    let buttons = /*HTML*/ `
+        <section class="filter-checks">
             <button>Format</button>
             <button>Sjanger</button>
             <button>Plateselskap</button>
         </section>
-        `
-        html = checkbox + buttons
-        return html
-    } else {
-        return ''
-    }
+        `;
+    html = checkbox + buttons;
+    return html;
+  } else {
+    return "";
+  }
 }
 
-function generateProductHome(){
-    let list = []
-    let search = model.viewState.homePage.search
-    let category = model.viewState.homePage.category
-    if (search === null) return ''
-    if (search !== null){
-        if (category === 'alt') list = searchAll()
-        else if (category !== 'alt' && category !== null) list = searchCategories()
-    }
+function generateProductHome() {
+  let list = [];
+  let search = model.viewState.homePage.search;
+  let category = model.viewState.homePage.category;
+  if (search === null) return "";
+  if (search !== null) {
+    if (category === "alt") list = searchAll();
+    else if (category !== "alt" && category !== null) list = searchCategories();
+  }
 
-    return generateProductList(list)
+  return generateProductList(list);
 }
 
 function generateProductList(list) {
-    let html = ''
-    for (let i = 0; i < list.length; i++){
-        html += /*HTML*/ `
+  let html = "";
+  for (let i = 0; i < list.length; i++) {
+    html += /*HTML*/ `
             <section class="product" onclick="goToProductPage(${list[i].id})" >
                 <img class="previewimg" 
                 src="${list[i].img}">
@@ -137,8 +141,8 @@ function generateProductList(list) {
     
             </section>
             <br>
-        `
-    }
+        `;
+  }
 
-    return html
+  return html;
 }

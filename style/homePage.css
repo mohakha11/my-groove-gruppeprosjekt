@@ -1,11 +1,8 @@
-
-
 /* ==========================================
    1. Kategoribar (#category)
    ========================================== */
 #category {
   display: flex;
-  background-color: #e6e6e6;
   width: 100%;
   max-width: 900px;
   margin: 20px auto 10px auto;
@@ -15,9 +12,12 @@
   flex: 1;
   text-align: center;
   padding: 10px 15px;
-  font-size: 0.95rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* font-size: 1.92rem; */
   font-weight: bold;
-  color: #333;
+  text-shadow: #000000;
+  /* background: none; */
+  color: #e3500c;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -37,7 +37,7 @@
   max-width: 900px;
   margin: 0 auto;
   background-color: transparent; /* Fjerner den grå bakgrunnen helt */
-  padding: 0;                     /* Fjerner padding rundt */
+  padding: 0; /* Fjerner padding rundt */
 }
 
 /* Avansert søk-knapp til venstre */
@@ -66,6 +66,7 @@
 #show-category input {
   width: 100%;
   background-color: #ffffff;
+  color: #000000;
   border: 1px solid #b0b0b0;
   border-radius: 4px;
   padding: 10px 12px;
@@ -78,3 +79,33 @@
   border-color: #333;
 }
 
+.filter-checks {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: transparent; /* Fjerner den grå bakgrunnen helt */
+  padding: 0; /* Fjerner padding rundt */
+}
+
+/* Mobilvisning */
+@media (max-width: 500px) {
+  #category {
+    display: grid;
+  }
+  #show-category {
+    display: grid;
+    align-items: center;
+  }
+
+  .filter-checks {
+    display: grid;
+    align-items: left;
+    gap: 0px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

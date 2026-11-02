@@ -1,20 +1,20 @@
 /* Header-beholderen */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;                 /* Fyller hele bredden av skjermen */
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;           /* Trekker den ut over body-paddingen til venstre */
-    margin-right: -50vw;          /* Trekker den ut over body-paddingen til høyre */
-    margin-top: -3.5rem;          /* Fjerner tomrommet helt øverst */
-    margin-bottom: 30px;
-    padding: 15px 40px;           /* Litt god plass på sidene for innholdet */
-    background-color: var(--code-bg);
-    border-bottom: 1px solid var(--border); /* Valgfritt: bare ramme under hvis du vil */
-    border-radius: 0;             /* Fjerner runde hjørner så den dekker helt ut */
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 100vw; /* Fyller hele bredden av skjermen */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; /* Trekker den ut over body-paddingen til venstre */
+  margin-right: -50vw; /* Trekker den ut over body-paddingen til høyre */
+  margin-top: -3.5rem; /* Fjerner tomrommet helt øverst */
+  margin-bottom: 30px;
+  padding: 15px 40px; /* Litt god plass på sidene for innholdet */
+  background-color: var(--code-bg);
+  border-bottom: 1px solid var(--border); /* Valgfritt: bare ramme under hvis du vil */
+  border-radius: 0; /* Fjerner runde hjørner så den dekker helt ut */
 }
 
 /* 1. Venstre sone (Kontakt oss) */
@@ -42,7 +42,7 @@
 
 /* Størrelser på ikoner og logo */
 #logo {
-  height: 50px;
+  height: 80px;
   cursor: pointer;
   object-fit: contain;
 }
@@ -53,13 +53,30 @@
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
 html {
   overflow-y: scroll;
+}
+
+/* Mobilvisning */
+@media (max-width: 500px) {
+  .head {
+    margin-bottom: 300px;
+  }
+  #logo {
+    height: 30px;
+    cursor: pointer;
+    object-fit: contain;
+  }
+
+  #profileBtn {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+  }
+
+  #cartBtn {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
 }
