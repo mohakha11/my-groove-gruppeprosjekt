@@ -14,7 +14,7 @@ function productPage() {
         <div>
             <img src="${product.img}">
             <div>★★★★☆</div>
-            <button><a href="#commentSection">Kommentarer</a></button>
+            <div><a href="#commentSection">Kommentarer</a></div>
         </div>
 
         <div>

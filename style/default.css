@@ -4,7 +4,7 @@
   --muted: #666666;
   --code-bg: #f4f4f4;
   --border: #e0e0e0;
-  --accent: #4f6df5;
+  --accent: hsl(27, 75%, 34%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,7 +14,7 @@
     --muted: #9a9a9a;
     --code-bg: #262629;
     --border: #38383c;
-    --accent: #8ea2ff;
+    --accent: hsl(27, 75%, 34%);
   }
 }
 
@@ -24,7 +24,7 @@ html[data-theme="dark"] {
   --muted: #9a9a9a;
   --code-bg: #262629;
   --border: #38383c;
-  --accent: #8ea2ff;
+  --accent: hsl(27, 75%, 34%);
 }
 
 html[data-theme="light"] {
@@ -33,7 +33,7 @@ html[data-theme="light"] {
   --muted: #666666;
   --code-bg: #f4f4f4;
   --border: #e0e0e0;
-  --accent: #4f6df5;
+  --accent: hsl(27, 75%, 34%);
 }
 
 * {
