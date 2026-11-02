@@ -34,6 +34,7 @@ function productPage() {
                 >&gt;</button>
             </p>
             <button onclick="addToCart(${currentProduct})">Legg til handlekurv</button>
+            <button onclick="addToFavorites(${currentProduct})">Favoritt</button>
 
         <div>
             <p>${product.price},-</p>

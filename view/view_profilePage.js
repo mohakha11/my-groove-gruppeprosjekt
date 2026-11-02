@@ -1,4 +1,4 @@
-function profilePageEdit() {
+function profilePageEdit_OG() {
     let user = findLoggedInUser()
     let html = /*HTML*/ `
     <div class="profile-edit-wrapper">
@@ -26,7 +26,7 @@ function profilePage(){
         <div class="profile-info-box"> 
             <h2 class="profile-info-box h2">${user.userName}</h2>
             <div class="profile-img-container">
-                <img onclick="changeProfilePic()" src="img/placeholder-profile.png" alt="Profil bilde"> <!-- Klikkbar for å endre profilbilde. Standard valg og evt. opplast. -->
+                <img src="img/placeholder-profile.png" alt="Profil bilde">
             </div>
             
           <div class="profile-text-details">
