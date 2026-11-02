@@ -1,17 +1,20 @@
 function profilePageEdit() {
-    const userName = model.usersProfile[0].userName
-    return /*HTML*/ `
+    let user = findLoggedInUser()
+    let html = /*HTML*/ `
     <div class="profile-edit-wrapper">
         <div class="profile-edit-main">
             <h2 class="profile-edit-main-h2">Endre brukernavn</h2>
-            <input class="profile-edit-input" type="text" value="${userName}" oninput="userName = this.value">
+            <input class="profile-edit-input" 
+            value="${user.userName}" 
+            oninput="model.viewState.profilePage.userName=this.value">
         </div>
         <div class="profile-edit-actions">
-            <button class="profile-edit-btn-back" onclick="saveProfile()">Tilbake</button>
-            <button class="profile-edit-btn-save" onclick="saveProfile()">Lagre</button>
+            <button class="profile-edit-btn-back" onclick="exitEditProfile('quit')">Tilbake</button>
+            <button class="profile-edit-btn-save" onclick="exitEditProfile('save')">Lagre</button>
         </div>
     </div>
-    `;
+    `
+    return html
 }
 
 function profilePage(){

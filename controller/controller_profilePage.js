@@ -1,16 +1,21 @@
-function setProfilePage(){
-    if (model.app.currentPage === 'profile') profilePage()
-    if (model.app.currentPage === 'edit') profilePageEdit()
-}
-
 function goToEdit() {
     model.app.currentPage = 'edit';
-    updateView(); 
+    updateView()
 }                       // begge de her funksjonene er for å bytte mellom sidene
 
-function saveProfile() {
-    model.app.currentPage = 'profile';
-    updateView(); 
+function exitEditProfile(action) {
+    const currentUser = model.app.loggedInUserId
+    const users = model.usersProfile
+    if (action === 'save') {
+        model.app.currentPage = 'profilePage';
+        for (let i = 0; i < users.length; i++) {
+        if (users[i].userID === currentUser) model.usersProfile[i].userName = model.viewState.profilePage.userName
+        }
+    }
+    if (action === 'quit') {
+        model.app.currentPage = 'profilePage';
+    }
+    updateView()
 }
 
 

@@ -17,6 +17,9 @@ const model = {
             currentProductID: null,
             selectedAmount: 1,
         },
+        profilePage: {
+            userName: '',
+        },
         orderPage: {
             customer: {
                 firstName: null,

@@ -4,6 +4,7 @@ function updateView() {
   if (model.app.currentPage === "landingPage") loadedPage = homePage();
   else if (model.app.currentPage === "productPage") loadedPage = productPage();
   else if (model.app.currentPage === "profilePage") loadedPage = profilePage();
+  else if (model.app.currentPage === 'edit') loadedPage = profilePageEdit();
   else if (model.app.currentPage === "cartPage") loadedPage = cartPage();
   else if (model.app.currentPage === "payPage") loadedPage = payPage();
 
