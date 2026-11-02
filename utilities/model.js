@@ -67,11 +67,8 @@ const model = {
         },
       },
     },
-    cart: [
-      { productID: 1, amount: 2 },
-      { productID: 2, amount: 1 },
-    ],
-    //cart:[]
+    //cart: [{ productID: null, amount: null},],
+    cart:[]
   },
 
   format: [
@@ -139,7 +136,7 @@ const model = {
       registerDate: "10.10.2026",
       lastOnline: "16.10.2026",
       contributions: 42,
-      favorites: [2, 3], //ID til produkter i butikk
+      favorites: [], //ID til produkter i butikk
       collection: [1, 2, 3],
       formatPref: null, //kunde sin format preferanse.
     },
