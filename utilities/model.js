@@ -139,7 +139,7 @@ const model = {
       registerDate: "10.10.2026",
       lastOnline: "16.10.2026",
       contributions: 42,
-      favorites: [], //ID til produkter i butikk
+      favorites: [2, 3], //ID til produkter i butikk
       collection: [1, 2, 3],
       formatPref: null, //kunde sin format preferanse.
     },

@@ -12,24 +12,19 @@ function updateView() {
         <header>
             <section>
                 <div class="header">
-                    <div onclick="changePage('contactPage')">Kontakt oss</div>
-                    <img onclick="changePage('landingPage')" src="img/headerlogo.webp"
+                    <div onclick="changePage('contactPage')"
+                    style="cursor: pointer">Kontakt oss</div>
+                    <abbr title="Startside"><img onclick="changePage('landingPage')" src="img/headerlogo.webp"
                     alt="Logo her"
-                    id="logo">
+                    id="logo"></abbr>
                     <abbr title="Profil"><img src="img/placeholder-profile.png" 
                     alt="Profilbilde"
                     id="profileBtn"
+                    style="cursor: pointer"
                     onclick="changePage('profilePage')"
                     ></abbr>
-                    <img onclick="changePage('cartPage')" src="img/placeholder_cart.png" 
-                    alt="Handlekurv"  id="cartBtn">
-                </div>
-                <div>
-                    <!-- <button onclick="changePage('landingPage')">HomePage</button> -->
-                     <button onclick="changePage('productPage')">Product Page Dev placeholder</button>
-                    <!-- <button onclick="changePage('profilePage')">Profile Page</button> -->
-                    <!-- <button onclick="changePage('cartPage')">Handlekurv</button> -->
-                    <button onclick="changePage('payPage')">Betaling Dev placeholder</button>
+                    <abbr title="Handlekurv"><img onclick="changePage('cartPage')" src="img/placeholder_cart.png" 
+                    alt="Handlekurv"  id="cartBtn"></abbr>
                 </div>
             </section>
         </header>
