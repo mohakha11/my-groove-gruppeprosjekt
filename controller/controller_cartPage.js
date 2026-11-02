@@ -3,6 +3,12 @@ function goToPayPage() {
     updateView()
 }
 
+function goBackToPage(page) {
+    if (page === 'cart') model.app.currentPage = 'cartPage'
+    if (page === 'home') model.app.currentPage = 'landingPage'
+    updateView()
+}
+
 function removeCartItem(item){
     model.viewState.cart.splice(item, 1)
     updateView()

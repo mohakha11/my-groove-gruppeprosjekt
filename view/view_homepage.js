@@ -19,15 +19,15 @@ function homePage(){
             onclick="searchCategory('nyheter')">Nyheter</div>
         </section>
 
+        `
+    let advancedFilter = ''
+    if (category !== 'nyheter') {
+        advancedFilter = /*HTML*/` 
         <section id="show-category">
             <button onclick="showFilterLanding()">
             Avansert søk</button>
             <div>${showHomeCategory()}</div>
         </section>
-        `
-    let advancedFilter = ''
-    if (category !== 'nyheter') {
-        advancedFilter = /*HTML*/` 
         <div>${filterButton()}</div>
         <div id="searchResult">${generateProductHome()}</div>
         `
