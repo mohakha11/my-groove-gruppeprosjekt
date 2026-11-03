@@ -1,7 +1,7 @@
 function goToEdit() {
     model.app.currentPage = 'edit';
     updateView()
-}                       // begge de her funksjonene er for å bytte mellom sidene
+}
 
 function exitEditProfile(action) {
     const currentUser = model.app.loggedInUserId
