@@ -1,38 +1,36 @@
 #cart-container {
-    margin: 20px;
-    display: grid;
-    
-    grid-template-columns: 60% 30%;
-    gap: 30px;
-    .cart{
-        padding: 10px;
-        gap: 20px;
-        
-        h2{
-            text-decoration: underline;
-            text-align: center;
-        }
-    }
-}
+  margin: 20px;
+  display: grid;
 
-#pay-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 60% 30%;
+  gap: 30px;
+  .cart {
+    padding: 10px;
     gap: 20px;
+
+    h2 {
+      text-decoration: underline;
+      text-align: center;
+    }
+  }
 }
 
-.previewimg{
-    height: 100px;
-    width: 150px;
-    cursor: pointer;
+#pay-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.previewimg {
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
 }
 
 .cartItem {
-    display: flex;
-    
+  display: flex;
 }
 
 .payBtn {
-    background-color: aliceblue;
+  background-color: aliceblue;
 }
-

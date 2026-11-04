@@ -1,5 +1,23 @@
 /* Header-beholderen */
 .header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  width: 100vw; /* Fyller hele bredden av skjermen */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; /* Trekker den ut over body-paddingen til venstre */
+  margin-right: -50vw; /* Trekker den ut over body-paddingen til høyre */
+  margin-top: -3.5rem; /* Fjerner tomrommet helt øverst */
+  margin-bottom: 30px;
+  padding: 15px 40px; /* Litt god plass på sidene for innholdet */
+  background-color: var(--code-bg);
+  border-bottom: 1px solid var(--border); /* Valgfritt: bare ramme under hvis du vil */
+  border-radius: 0; /* Fjerner runde hjørner så den dekker helt ut */
+}
+
+.header-admin {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,6 +56,7 @@
 }
 
 .profile-img-container-header {
+  display: inline-block;
   width: 110px;
   height: 110px;
   border-radius: 50%;
@@ -85,7 +104,7 @@ html {
   }
 }
 
-.admin-header-btn{
+.admin-header-btn {
   height: 40px;
   width: 180px;
 }
