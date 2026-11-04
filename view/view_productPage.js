@@ -10,6 +10,7 @@ function productPage() {
   }
 
   let html = /*HTML*/ `
+    <button onclick="goBackToPage('home')">Tilbake</button>
         <section id="productInfoSection">      
         <div>
             <img src="${product.img}">

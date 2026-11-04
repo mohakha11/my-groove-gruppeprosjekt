@@ -28,6 +28,8 @@
 
 #searchResult {
   margin-top: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
   display: flex;
   gap: 20px;
 }
