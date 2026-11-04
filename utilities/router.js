@@ -37,21 +37,18 @@ function updateView() {
     } else if (model.app.loggedInUserId == 2) {
         header = /*HTML*/ `
             <header>
-                <section>
-                    <div class="header">
-                        <abbr title="Startside"><img onclick="changePage('landingPage')" src="img/headerlogo.webp"
-                        alt="Logo her"
-                        id="logo"></abbr>
-                        <abbr title="Handlekurv"><img onclick="changePage('cartPage')" src="img/placeholder_cart.png" 
-                        alt="Handlekurv"  id="cartBtn"></abbr>
-                        <abbr class="profile-img-container" title="Profil"><img class="profile-img" src="img/placeholder-profile.png" 
-                        alt="Profilbilde"
-                        id="profileBtn"
-                        style="cursor: pointer"
-                        onclick="changePage('profilePage')"
-                        ></abbr>
-                    </div>
-                </section>
+                <section class="header" style="padding: 40px">
+                    <button class="admin-header-btn" style="background-color: #eb804f">Lagerbeholdning</button>
+                    <button class="admin-header-btn">Ordre</button>
+                    <button class="admin-header-btn">Ansatte</button>
+                    <button class="admin-header-btn">Brukere</button>
+                    
+                    <section>
+                        <p style="margin: 0px;">Du er logget inn som: </p>
+                        <p style="margin: 0px;"><b>Ole Hagen</b></p>
+                    </section>
+                    <button>Logg ut</button>
+                    </section>
             </header>
         `;
     }

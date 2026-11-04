@@ -80,3 +80,9 @@ html {
     cursor: pointer;
   }
 }
+
+
+.admin-header-btn{
+  height: 40px;
+  width: 180px;
+}
