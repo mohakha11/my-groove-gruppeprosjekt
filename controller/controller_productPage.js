@@ -5,6 +5,8 @@ function addToCart(productID) {
     amount: model.viewState.productPage.selectedAmount,
   });
   model.viewState.productPage.selectedAmount = 1;
+
+  updateView();
 }
 
 function goToProductPage(productID) {

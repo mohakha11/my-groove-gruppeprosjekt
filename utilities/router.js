@@ -22,14 +22,20 @@ function updateView() {
                         <abbr title="Startside"><img onclick="changePage('landingPage')" src="img/headerlogo.webp"
                         alt="Logo her"
                         id="logo"></abbr>
-                        <div>
-                            <abbr title="Handlekurv"><img onclick="changePage('cartPage')" src="img/placeholder_cart.png" 
-                            alt="Handlekurv"  id="cartBtn"></abbr>
-                            <abbr class="profile-img-container-header" title="Profil"><img class="profile-img-header" src="img/placeholder-profile.png" 
-                            alt="Profilbilde"
-                            id="profileBtn"
-                            onclick="changePage('profilePage')"
-                            ></abbr>
+                        <div style="position: relative; display: inline-block;">
+                        <abbr title="Handlekurv">
+                        <img onclick="changePage('cartPage')" src="img/placeholder_cart.png" alt="Handlekurv" id="cartBtn">
+                        </abbr>
+                        <div style="position: absolute; top: -5px; right: -8px; background: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px; font-weight: bold;">
+                         ${model.viewState.cart.length}
+                        </div>
+                    </div>
+                        <abbr class="profile-img-container-header" title="Profil"><img class="profile-img-header" src="img/placeholder-profile.png" 
+                        alt="Profilbilde"
+                        id="profileBtn"
+                        style="cursor: pointer"
+                        onclick="changePage('profilePage')"
+                        ></abbr>
                     </div>
                 </section>
             </header>
