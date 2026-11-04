@@ -112,7 +112,7 @@ function testProduct() {
   };
 
   const electricladylandVinyl = {
-    id: "7",
+    id: 7,
     title: "Electric Ladyland",
     img: "img/cover_electricladyland.webp",
     formatID: "Vinyl", //placeholder
