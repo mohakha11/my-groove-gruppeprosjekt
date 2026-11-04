@@ -4,9 +4,9 @@ function switchToAdmin(){
     updateView()
 }
 
-function storagePageAdmin(){
-    let html = '';
-
-
-    return html
+function switchToUser(){
+    model.app.currentPage = 'landingPage';
+    model.app.loggedInUserId = 1;
+    updateView()
 }
+

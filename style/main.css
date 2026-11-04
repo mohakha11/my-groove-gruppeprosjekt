@@ -107,3 +107,9 @@ html {
   height: 40px;
   width: 180px;
 }
+
+#storage-nav{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}

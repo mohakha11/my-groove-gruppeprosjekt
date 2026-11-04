@@ -9,8 +9,7 @@ function updateView() {
   else if (model.app.currentPage === "cartPage") loadedPage = cartPage();
   else if (model.app.currentPage === "payPage") loadedPage = payPage();
   else if (model.app.currentPage === "contactPage") loadedPage = contactPage();
-  else if (model.app.currentPage === "adminStprage")
-    loadedPage = storagePageAdmin();
+  else if (model.app.currentPage === "adminStorage") loadedPage = storagePageAdmin();
 
   if (model.app.loggedInUserId == 1) {
     header = /*HTML*/ `
@@ -20,7 +19,7 @@ function updateView() {
 
                     <div class="header">
 
-                        <div onclick="changePage('contactPage')" //DIV CONTACT PAGE
+                        <div onclick="changePage('contactPage')"
                         style="cursor: pointer; margin-top: 40px;">Kontakt oss</div>
 
                         <abbr title="Startside"><img onclick="changePage('landingPage')" src="img/headerlogo.webp"
@@ -62,7 +61,7 @@ function updateView() {
                         <p style="margin: 0px;">Du er logget inn som: </p>
                         <p style="margin: 0px;"><b>Ole Hagen</b></p>
                     </section>
-                    <button>Logg ut</button>
+                    <button onclick="switchToUser()">Logg ut</button>
                     </section>
             </header>
         `;
