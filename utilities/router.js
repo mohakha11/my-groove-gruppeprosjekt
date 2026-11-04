@@ -18,18 +18,18 @@ function updateView() {
                 <section>
                     <div class="header">
                         <div onclick="changePage('contactPage')"
-                        style="cursor: pointer">Kontakt oss</div>
+                        style="cursor: pointer; margin-top: 40px;">Kontakt oss</div>
                         <abbr title="Startside"><img onclick="changePage('landingPage')" src="img/headerlogo.webp"
                         alt="Logo her"
                         id="logo"></abbr>
-                        <abbr title="Handlekurv"><img onclick="changePage('cartPage')" src="img/placeholder_cart.png" 
-                        alt="Handlekurv"  id="cartBtn"></abbr>
-                        <abbr class="profile-img-container-header" title="Profil"><img class="profile-img-header" src="img/placeholder-profile.png" 
-                        alt="Profilbilde"
-                        id="profileBtn"
-                        style="cursor: pointer"
-                        onclick="changePage('profilePage')"
-                        ></abbr>
+                        <div>
+                            <abbr title="Handlekurv"><img onclick="changePage('cartPage')" src="img/placeholder_cart.png" 
+                            alt="Handlekurv"  id="cartBtn"></abbr>
+                            <abbr class="profile-img-container-header" title="Profil"><img class="profile-img-header" src="img/placeholder-profile.png" 
+                            alt="Profilbilde"
+                            id="profileBtn"
+                            onclick="changePage('profilePage')"
+                            ></abbr>
                     </div>
                 </section>
             </header>
@@ -37,7 +37,7 @@ function updateView() {
   } else if (model.app.loggedInUserId == 2) {
     header = /*HTML*/ `
             <header>
-                <section class="header" style="padding: 40px">
+                <section class="header-admin" style="padding: 40px">
                     <button class="admin-header-btn" style="background-color: #eb804f">Lagerbeholdning</button>
                     <button class="admin-header-btn">Ordre</button>
                     <button class="admin-header-btn">Ansatte</button>
