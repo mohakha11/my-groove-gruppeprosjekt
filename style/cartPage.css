@@ -34,3 +34,7 @@
 .payBtn {
   background-color: aliceblue;
 }
+
+#storage-nav{
+  display: flex;
+}
