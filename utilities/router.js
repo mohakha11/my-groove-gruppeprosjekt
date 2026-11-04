@@ -20,7 +20,7 @@ function updateView() {
 
                     <div class="header">
 
-                        <div onclick="changePage('contactPage')" //DIV CONTACT PAGE
+                        <div onclick="changePage('contactPage')"
                         style="cursor: pointer; margin-top: 40px;">Kontakt oss</div>
 
                         <abbr title="Startside"><img onclick="changePage('landingPage')" src="img/headerlogo.webp"
@@ -38,7 +38,6 @@ function updateView() {
                             <abbr class="profile-img-container-header" title="Profil"><img class="profile-img-header" src="img/placeholder-profile.png" 
                             alt="Profilbilde"
                             id="profileBtn"
-                            style="margin-left: 20px;"
                             onclick="changePage('profilePage')"></abbr>
                         </div>
                     </div>
