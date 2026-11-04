@@ -4,7 +4,8 @@ function storagePageAdmin(){
         <section id="storage-nav">
             <button>Filter</button>
             <input placeholder="Søk" style="width: 400px;">
-            <button style="margin-left: auto;">Registrer ny vare</button>
+            <button style="margin-left: auto;"
+            onclick="goToAddNewProduct()">Registrer ny vare</button>
         </section>
 
         <div>
@@ -56,4 +57,43 @@ function getProductsStorage(){
 
     return tableItem
 
+}
+
+function addNewProduct(){
+    let html = /*HTML*/`
+        <button onclick="changePage('adminStorage')">Tilbake</button>
+
+        <div id="new-product-container">
+            <section id="new-product-img">
+                <img src="img/placeholder-product.png">
+            </section>
+            
+            <section id="new-product-desc">
+                <p><b>Albumtittel</b></p>
+                <input>
+                    <section>
+                        <p><b>Format</b></p>
+                        <input>
+                        <p><b>Utgivelsesår</b></p>
+                        <input>
+                    </section>
+
+                    <section>
+                        <p><b>Artist</b></p>
+                        <input>
+                        <p><b>Label</b></p>
+                        <input>
+                    </section>
+
+                    <section>
+                        <p><b>Pris</b></p>
+                        <input>
+                        <p><b>Antall</b></p>
+                        <input>
+                    </section>
+            </section>
+        </div>
+    
+    ` 
+    return html
 }

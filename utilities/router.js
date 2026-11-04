@@ -10,6 +10,7 @@ function updateView() {
   else if (model.app.currentPage === "payPage") loadedPage = payPage();
   else if (model.app.currentPage === "contactPage") loadedPage = contactPage();
   else if (model.app.currentPage === "adminStorage") loadedPage = storagePageAdmin();
+  else if (model.app.currentPage === "addProductPage") loadedPage = addNewProduct();
 
   if (model.app.loggedInUserId == 1) {
     header = /*HTML*/ `

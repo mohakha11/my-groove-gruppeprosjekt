@@ -108,3 +108,8 @@ html {
   height: 40px;
   width: 180px;
 }
+
+#new-product-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

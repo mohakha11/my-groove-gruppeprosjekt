@@ -10,3 +10,7 @@ function switchToUser(){
     updateView()
 }
 
+function goToAddNewProduct(){
+    model.app.currentPage = 'addProductPage';
+    updateView()
+}

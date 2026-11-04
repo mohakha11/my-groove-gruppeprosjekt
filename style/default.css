@@ -242,8 +242,9 @@ input[type="radio"] {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto;
+  justify-self: center;
   gap: 1rem;
   padding: 1rem;
   width: 100%;
