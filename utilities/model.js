@@ -1,6 +1,6 @@
 const model = {
   app: {
-    currentPage: "profilePage",
+    currentPage: "landingPage",
     loggedInUserId: 1, //Bruker er ikke innlogget = null
   },
   viewState: {

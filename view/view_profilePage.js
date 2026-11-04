@@ -1,8 +1,8 @@
 function profilePage() {
   let user = findLoggedInUser();
   let html = /*HTML*/ `
+  <button onclick="goBackToPage('home')">Tilbake</button>
   <div class="profile-page">
-
     <section class="profile-main-section"> 
         <div class="profile-info-box"> 
             <h2 class="profile-info-box h2">${user.userName}</h2>
