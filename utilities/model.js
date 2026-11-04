@@ -1,6 +1,6 @@
 const model = {
   app: {
-    currentPage: "landingPage",
+    currentPage: "profilePage",
     loggedInUserId: 1, //Bruker er ikke innlogget = null
   },
   viewState: {
@@ -139,6 +139,23 @@ const model = {
       favorites: [], //ID til produkter i butikk
       collection: [1, 2, 3],
       formatPref: null, //kunde sin format preferanse.
+    },
+    {
+      userID: 2,
+      img: "",
+      userName: "OleH",
+      email: "olehagen@getacademy.no",
+      phoneNumber: 12345678,
+      firstName: "Ole",
+      lastName: "Hagen",
+      userRole: 1,
+      online: "Pålogget",
+      registerDate: "09.10.2026",
+      lastOnline: "04.11.2026",
+      contributions: 50,
+      favorites: [],
+      collection: [],
+      formatPref: null,
     },
   ],
 

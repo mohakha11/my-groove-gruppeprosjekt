@@ -10,7 +10,7 @@ function profilePageEdit(){
             value="${user.userName}" 
             oninput="model.viewState.profilePage.userName=this.value">
             <div class="profile-img-container">
-                <img src="img/placeholder-profile.png" alt="Profil bilde">
+                <img class="profile-img"  src="img/placeholder-profile.png" alt="Profil bilde">
             </div>
             
           <div class="profile-text-details">

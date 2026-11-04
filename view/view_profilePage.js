@@ -44,7 +44,10 @@ function profilePage() {
             <button>&gt;</button>
         </div>
     </section>
-  </div>`;
+  </div>
+
+  <button onclick="switchToAdmin()">Bytt til admin, Dev test</button>
+  `;
 
   return html;
 }
