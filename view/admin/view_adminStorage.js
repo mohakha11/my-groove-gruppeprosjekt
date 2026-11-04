@@ -65,7 +65,7 @@ function addNewProduct(){
 
         <div id="new-product-container">
             <section id="new-product-img">
-                <img src="img/placeholder-product.png">
+                <img src="img/placeholder-product.png" alt="Produktbilde">
             </section>
             
             <section id="new-product-desc">
