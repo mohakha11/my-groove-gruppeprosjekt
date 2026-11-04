@@ -56,6 +56,7 @@
 }
 
 .profile-img-container-header {
+  display: inline-block;
   width: 110px;
   height: 110px;
   border-radius: 50%;
