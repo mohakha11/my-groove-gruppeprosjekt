@@ -63,29 +63,33 @@ function delCollections(type){
     let images = ''
     switch (type) {
         case "fav":
+            if (currentUser.favorites.length < 1){
+                    return "Du har ikke lagt til noen favoritter enda"
+                }
             for (let product of products) {
                 if (currentUser.favorites.includes(product.id)){
                     images += /*HTML*/ `
                     <img src="${product.img}"
                     class="collection-IMG-del"
-                    onclick="goToProductPage(${products.indexOf(product)}, 'fav')">
+                    onclick="delCollectionItem(${product.id}, 'fav')">
                     `
-                } else if (currentUser.favorites.length < 1){
-                    return "Du har ikke lagt til noen favoritter enda"
                 }
             }
+            break;
         case "collect":
+            if (currentUser.collection.length < 1){
+                    return "Du har ikke lagt til noe i samligen din enda"
+                }
             for (let product of products) {
                 if (currentUser.collection.includes(product.id)){
                     images += /*HTML*/ `
                     <img src="${product.img}"
                     class="collection-IMG-del"
-                    onclick="delCollectionItem(${products.indexOf(product)}, 'collect')">
+                    onclick="delCollectionItem(${product.id}, 'collect')">
                     `
-                } else if (currentUser.collection.length < 1){
-                    return "Du har ikke lagt til noe i samligen din enda"
                 }
-        }
-        return images
+            }
+            break;
     }
+    return images
 }

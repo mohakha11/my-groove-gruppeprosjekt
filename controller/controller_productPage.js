@@ -26,11 +26,11 @@ function setCartAmount(value) {
 }
 
 function addToFavorites(productID) {
-  const currentUser = model.app.loggedInUserId;
-  const users = model.usersProfile;
-  for (let i = 0; i < users.length; i++) {
-    if (users[i].userID === currentUser) {
-      model.usersProfile[i].favorites.push(productID);
+  const currentUser = findLoggedInUser();
+  const products = model.productsData
+      for (let obj of products) {
+        if (obj.id === productID){
+        currentUser.favorites.push(obj.id);
     }
   }
 }
