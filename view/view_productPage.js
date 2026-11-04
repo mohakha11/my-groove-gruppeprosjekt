@@ -11,39 +11,37 @@ function productPage() {
 
   let html = /*HTML*/ `
     <button onclick="goBackToPage('home')">Tilbake</button>
-        <section id="productInfoSection">      
-        <div>
-            <img src="${product.img}">
-            <div>★★★★☆</div>
-            <div><a href="#commentSection">Kommentarer</a></div>
+    
+    <section id="productInfoSection">
+    <div class="product-left">
+        <img src="${product.img}">
+        <div>★★★★☆</div>
+        <button onclick="location.href='#commentSection'">Kommentarer</button>
+    </div>
+    <div class="product-right">
+        <h3>${product.artist}</h3>
+        <h3>${product.title}</h3>
+        <p>${product.year}</p>
+        <p>${product.label}</p>
+        <p>${product.formatID}</p>
+
+        <button onclick="addToCart(${currentProduct})">Legg til handlekurv</button>
+        <button onclick="addToFavorites(${currentProduct})">Favoritt</button>
+
+        <div class="priceAndStock">
+            <div><strong>${product.price},-</strong></div>
+            <div>□ På lager</div>
         </div>
-
-        <div>
-            <h3>${product.artist}</h3>
-            <h3>${product.title}</h3>
-            <p>${product.year}</p>
-            <p>${product.label}</p>
-            <p>${product.formatID}</p>
-
-            <p>Antall: 
-                <button
-                onclick="setCartAmount('sub')"
-                >&lt;</button>
-                <p id="cartAmount">${model.viewState.productPage.selectedAmount}</p>
-                <button
-                onclick="setCartAmount('add')"
-                >&gt;</button>
-            </p>
-            <button onclick="addToCart(${currentProduct})">Legg til handlekurv</button>
-            <button onclick="addToFavorites(${currentProduct})">Favoritt</button>
-
-        <div>
-            <p>${product.price},-</p>
-            <p>□ På lager</p>
+        <div class="amountContainer">
+            <div>Antall:</div>
+            <button onclick="setCartAmount('sub')">&lt;</button>
+            <div id="cartAmount">${model.viewState.productPage.selectedAmount}</div>
+            <button onclick="setCartAmount('add')">&gt;</button>
         </div>
-        </section>
+    </div>
+</section>
 
-        <section id="commentSection">
+    <section id="commentSection">
         <div>
             <img src="img/placeholder-profile.png">
             <input type="text" placeholder="Skriv kommentar" onchange=""/>
@@ -54,29 +52,22 @@ function productPage() {
             <img src="img/placeholder-profile.png">
             <p>brukernavn</p>
             <p>1.12.2020 ★★★★☆</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
         </div>
         <div>
             <img src="img/placeholder-profile.png">
             <p>brukernavn2</p>
             <p>2.12.2020 ★★★☆☆</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
         </div>
         <div>
             <img src="profileImage">
             <p>brukernavn3</p>
             <p>3.12.2020 ★★☆☆☆</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
         </div>
-        </section>
-
-    
-    `;
+    </section>
+  `;
 
   return html;
 }
-
-// function addComment() {
-//   let html = "";
-//   for (let i = 0; i < model.userReview.comment.length; i++) {}
-// }

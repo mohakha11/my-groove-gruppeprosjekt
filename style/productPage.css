@@ -1,0 +1,50 @@
+#productInfoSection {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    max-width: 700px;
+    margin: -10px auto 0px auto; 
+    padding: 0px 15px;           
+}
+
+.product-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-right {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#productInfoSection img {
+    width: 180px;  
+    height: 180px;  
+    object-fit: cover;
+}
+
+#productInfoSection h3, 
+#productInfoSection p {
+    margin: 0;
+}
+
+.priceAndStock {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 6px;
+}
+
+.amountContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+#commentSection {
+    margin-top: 100px; 
+}
