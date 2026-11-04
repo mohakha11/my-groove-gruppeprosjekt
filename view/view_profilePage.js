@@ -1,5 +1,5 @@
-function profilePage(){
-  let user = findLoggedInUser()
+function profilePage() {
+  let user = findLoggedInUser();
   let html = /*HTML*/ `
   <div class="profile-page">
 
@@ -7,7 +7,7 @@ function profilePage(){
         <div class="profile-info-box"> 
             <h2 class="profile-info-box h2">${user.userName}</h2>
             <div class="profile-img-container">
-                <img src="img/placeholder-profile.png" alt="Profil bilde">
+                <img class="profile-img" src="img/placeholder-profile.png" alt="Profil bilde">
             </div>
             
           <div class="profile-text-details">
@@ -28,7 +28,7 @@ function profilePage(){
             <div class="carousel-row">
             <button>&lt;</button>
                 <div class="carousel-images">
-                    <div>${getCollections('fav')}</div>
+                    <div>${getCollections("fav")}</div>
                 </div>
             <button>&gt;</button>
             </div>
@@ -39,50 +39,50 @@ function profilePage(){
             <div class="carousel-row">
             <button>&lt;</button>
                 <div class="carousel-images">
-                    <div>${getCollections('collect')}</div>
+                    <div>${getCollections("collect")}</div>
                 </div>
             <button>&gt;</button>
         </div>
     </section>
-  </div>`
+  </div>`;
 
   return html;
 }
 
-function getCollections(type){
-    const products = model.productsData
-    const currentUser = findLoggedInUser()
-    let images = ''
-    switch (type) {
-        case "fav":
-            if (currentUser.favorites.length < 1){
-                    return "Du har ikke lagt til noen favoritter enda"
-                }
-            for (let product of products) {
-                if (currentUser.favorites.includes(product.id)){
-                    images += /*HTML*/ `
+function getCollections(type) {
+  const products = model.productsData;
+  const currentUser = findLoggedInUser();
+  let images = "";
+  switch (type) {
+    case "fav":
+      if (currentUser.favorites.length < 1) {
+        return "Du har ikke lagt til noen favoritter enda";
+      }
+      for (let product of products) {
+        if (currentUser.favorites.includes(product.id)) {
+          images += /*HTML*/ `
                     <img src="${product.img}"
                     class="collection-IMG"
                     onclick="goToProductPage(${product.id})">
-                    `
-                }
-            }
-            break;
+                    `;
+        }
+      }
+      break;
 
-        case "collect":
-            if (currentUser.collection.length < 1){
-                    return "Du har ikke lagt til noe i samligen din enda"
-                }
-            for (let product of products) {
-                if (currentUser.collection.includes(product.id)){
-                    images += /*HTML*/ `
+    case "collect":
+      if (currentUser.collection.length < 1) {
+        return "Du har ikke lagt til noe i samligen din enda";
+      }
+      for (let product of products) {
+        if (currentUser.collection.includes(product.id)) {
+          images += /*HTML*/ `
                     <img src="${product.img}"
                     class="collection-IMG"
                     onclick="goToProductPage(${product.id})">
-                    `
-                }
-            }  
-            break;
-        }    
-    return images
+                    `;
+        }
+      }
+      break;
+  }
+  return images;
 }
