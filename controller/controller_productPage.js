@@ -1,11 +1,12 @@
 function addToCart(productID) {
   let cart = model.viewState.cart;
-  cart.push({
+  cart.push(
+    {
     productID: productID,
     amount: model.viewState.productPage.selectedAmount,
-  });
+    }
+  );
   model.viewState.productPage.selectedAmount = 1;
-
   updateView();
 }
 
@@ -44,39 +45,28 @@ function findCurrentProduct(productID){
 }
 
 function addComment(productID){
-
-}
-
-function displayComments(productID){
-  let html = ''
-  let userReview = ''
-  const reviews = model.reviews
-  const currentProduct = findCurrentProduct(productID)
-
-  //Objektet til produktet
-  for (let review of reviews) {
-    userReview = findUserReview(review.userID)
-    console.log("user", userReview)
-    console.log("review", review)
-    html += /*HTML*/ `
-      <div>
-        <p><img src="img/placeholder-profile.png"
-        class="profile-img-container-header"
-        > ${userReview.userName}, ${review.timestamp}</p>
-          <p>${review.stars}</p>
-          <p>${review.comment}</p>
-      </div>
-    
-    ` 
+  const currentUser = findLoggedInUser()
+  function setTime(){
+    const timestamp = new Date().getTime();
+    const date = new Date(timestamp);
+    return date.toLocaleDateString();
   }
-  return html
-}
+  model.reviews.unshift(
+    {
+      productID: 2,
+      userID: currentUser.userID,
+      comment: model.viewState.productPage.userComment,
+      stars: "★★★☆☆",
+      timestamp: setTime(),
+    }
+  );
 
+  updateView()
+}
 
 function findUserReview(userID){
   const users = model.usersProfile;
   for (let user of users) {
     if (user.userID === userID) return user
   }
-
 }
