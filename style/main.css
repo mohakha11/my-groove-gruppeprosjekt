@@ -139,3 +139,10 @@ html {
   grid-column: 2;
   grid-row: 2;
 }
+
+header {    /*når du scroller   #MK*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white; 
+}
