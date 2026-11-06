@@ -36,6 +36,7 @@ function testProduct() {
   const sabbathbloodyVinyl = {
     id: 1,
     title: "Sabbath Bloody Sabbath",
+    imgframe: "img/cover_ramme_vinyl.webp",
     img: "img/cover_sabbathbloodysabbath.jpg",
     formatID: "Vinyl", //placeholder
     artist: "Black Sabbath",
@@ -163,9 +164,22 @@ function testProduct() {
     updated: "04.11.2026",
   };
 
+  const blackalbumVinyl = {
+    id: 11,
+    title: "Metallica(The Black Album)",
+    img: "img/cover_blackalbum.jpg",
+    formatID: "Vinyl", //placeholder
+    artist: "Metallica",
+    year: 1991,
+    label: "Elektra",
+    price: 79,
+    amount: 220,
+    updated: "04.11.2026",
+  };
+
   //kassett
   const sputnik1Kassett = {
-    id: 11,
+    id: 20,
     title: "Sputnik 1",
     img: "img/cover_sputnik1.jpg",
     formatID: "Kassett", //placeholder
@@ -178,7 +192,7 @@ function testProduct() {
   };
 
   const sputnik2Kassett = {
-    id: 12,
+    id: 21,
     title: "Sputnik 2",
     img: "img/cover_sputnik2.jpg",
     formatID: "Kassett", //placeholder
@@ -191,7 +205,7 @@ function testProduct() {
   };
 
   const sputnik3Kassett = {
-    id: 13,
+    id: 23,
     title: "Sputnik 3",
     img: "img/cover_sputnik3.jpg",
     formatID: "Kassett", //placeholder
@@ -204,7 +218,7 @@ function testProduct() {
   };
 
   const sputnik4Kassett = {
-    id: 14,
+    id: 24,
     title: "Sputnik 4",
     img: "img/cover_sputnik4.jpg",
     formatID: "Kassett", //placeholder
@@ -230,8 +244,138 @@ function testProduct() {
     updated: "04.11.2026",
   };
 
-  const blackalbumCD = {
+  const sabbathbloodyCD = {
     id: 31,
+    title: "Sabbath Bloody Sabbath",
+    img: "img/cover_sabbathbloodysabbath.jpg",
+    formatID: "CD", //placeholder
+    artist: "Black Sabbath",
+    year: 1987,
+    label: "Vertigo",
+    price: 99,
+    amount: 30,
+    updated: "04.11.2026",
+  };
+
+  const darksideofthemoonCD = {
+    id: 32,
+    title: "Sabbath Bloody Sabbath",
+    img: "img/cover_darksideofthemoon.png",
+    formatID: "CD", //placeholder
+    artist: "Pink Floyd",
+    year: 1986,
+    label: "EMI",
+    price: 89,
+    amount: 40,
+    updated: "04.11.2026",
+  };
+
+  const neverlovedelvisCD = {
+    id: 33,
+    title: "Never Loved Elvis",
+    img: "img/cover_neverlovedelvis.jpg",
+    formatID: "CD", //placeholder
+    artist: "The Wonder Stuff",
+    year: 1991,
+    label: "Polydor",
+    price: 99,
+    amount: 98,
+    updated: "04.11.2026",
+  };
+
+  const dolittleCD = {
+    id: 34,
+    title: "Dolittle",
+    img: "img/cover_doolittle.jpg",
+    formatID: "CD", //placeholder
+    artist: "Pixies",
+    year: 1989,
+    label: "4AD",
+    price: 99,
+    amount: 110,
+    updated: "04.11.2026",
+  };
+
+  const somewhereintimeCD = {
+    id: 35,
+    title: "Somewhere in Time",
+    img: "img/cover_somewhereintime.jpg",
+    formatID: "CD", //placeholder
+    artist: "Iron Maiden",
+    year: 1986,
+    label: "EMI",
+    price: 89,
+    amount: 150,
+    updated: "04.11.2026",
+  };
+
+  const vinfrakjøkkenglassCD = {
+    id: 36,
+    title: "Vin fra kjøkkenglass",
+    img: "img/cover_vinfrakjøkkenglass.png",
+    formatID: "CD", //placeholder
+    artist: "HinterHagen",
+    year: 2023,
+    label: "ikkebarejattemed",
+    price: 299,
+    amount: 450,
+    updated: "04.11.2026",
+  };
+
+  const electricladylandCD = {
+    id: 37,
+    title: "Electric Ladyland",
+    img: "img/cover_electricladyland.webp",
+    formatID: "CD", //placeholder
+    artist: "Jimmy Hendrix",
+    year: 1987,
+    label: "Reprise",
+    price: 129,
+    amount: 91,
+    updated: "04.11.2026",
+  };
+
+  const bluesbrothersCD = {
+    id: 38,
+    title: "The Blues Brothers: Original Soundtrack Recording",
+    img: "img/cover_bluesbrothers.jpg",
+    formatID: "CD", //placeholder
+    artist: "The Blues Brothers",
+    year: 1995,
+    label: "Atlantic",
+    price: 99,
+    amount: 60,
+    updated: "04.11.2026",
+  };
+
+  const inthecourtofthecrimsonkingCD = {
+    id: 39,
+    title: "In the Court of the Crimson King",
+    img: "img/cover_inthecourtofthecrimsonking.jpeg",
+    formatID: "CD", //placeholder
+    artist: "King Crimson",
+    year: 1987,
+    label: "Island",
+    price: 159,
+    amount: 50,
+    updated: "04.11.2026",
+  };
+
+  const paranoidCD = {
+    id: 40,
+    title: "Paranoid",
+    img: "img/cover_paranoid.jpg",
+    formatID: "CD", //placeholder
+    artist: "Black Sabbath",
+    year: 1991,
+    label: "Castle",
+    price: 99,
+    amount: 30,
+    updated: "04.11.2026",
+  };
+
+  const blackalbumCD = {
+    id: 41,
     title: "Metallica(The Black Album)",
     img: "img/cover_blackalbum.jpg",
     formatID: "CD", //placeholder
@@ -239,7 +383,7 @@ function testProduct() {
     year: 1991,
     label: "Elektra",
     price: 79,
-    amount: 220,
+    amount: 120,
     updated: "04.11.2026",
   };
 
@@ -254,6 +398,7 @@ function testProduct() {
   model.productsData.push(bluesbrothersVinyl);
   model.productsData.push(inthecourtofthecrimsonkingVinyl);
   model.productsData.push(paranoidVinyl);
+  model.productsData.push(blackalbumVinyl);
 
   //kassett
   model.productsData.push(sputnik1Kassett);
@@ -263,5 +408,16 @@ function testProduct() {
 
   //cd
   model.productsData.push(larsmonsenCD);
+  model.productsData.push(sabbathbloodyCD);
+  model.productsData.push(darksideofthemoonCD);
+  model.productsData.push(neverlovedelvisCD);
+  model.productsData.push(dolittleCD);
+  model.productsData.push(somewhereintimeCD);
+  model.productsData.push(vinfrakjøkkenglassCD);
+  model.productsData.push(electricladylandCD);
+  model.productsData.push(bluesbrothersCD);
+  model.productsData.push(inthecourtofthecrimsonkingCD);
+  model.productsData.push(paranoidCD);
+
   model.productsData.push(blackalbumCD);
 }
