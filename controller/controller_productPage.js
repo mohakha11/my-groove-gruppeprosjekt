@@ -36,3 +36,7 @@ function addToFavorites(productID) {
     }
   }
 }
+
+function addComment(productID){
+  
+}

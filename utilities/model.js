@@ -1,7 +1,7 @@
 const model = {
   app: {
-    currentPage: "adminStorage",
-    loggedInUserId: 2, //Bruker er ikke innlogget = null
+    currentPage: "landingPage",
+    loggedInUserId: 1, //Bruker er ikke innlogget = null
   },
   viewState: {
     homePage: {
@@ -16,6 +16,7 @@ const model = {
     productPage: {
       currentProductID: null,
       selectedAmount: 1,
+      userComment: '',
     },
     profilePage: {
       userName: "",
