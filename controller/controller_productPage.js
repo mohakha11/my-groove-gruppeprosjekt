@@ -13,6 +13,7 @@ function addToCart(productID) {
 function goToProductPage(productID) {
   model.app.currentPage = "productPage";
   model.viewState.productPage.currentProductID = productID;
+  window.scrollTo(0, 0); /*Mk*/
   updateView();
 }
 

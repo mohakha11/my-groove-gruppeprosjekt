@@ -1,5 +1,6 @@
 function changePage(page) {
   model.app.currentPage = page;
+  window.scrollTo(0, 0);/*Mk*/
   updateView();
 }
 
