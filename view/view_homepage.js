@@ -110,10 +110,26 @@ function filterButton() {
 }
 
 function generateProductHome() {
+  let html = ''
   let list = [];
   let search = model.viewState.homePage.search;
   let category = model.viewState.homePage.category;
-  if (search === null) return "";
+  const products = model.productsData
+  if (search === null) {
+    for (let i = 0; i < products.length; i++){
+      html += /*HTML*/ `
+        <section class="product" onclick="goToProductPage(${products[i].id})" >
+          <img class="previewimg" 
+          src="${products[i].img}">
+          <div class="product-text">${products[i].title}</div>
+          <div class="product-text">${products[i].artist}</div>
+          <div class="product-text">${products[i].formatID}</div>
+          <div>${products[i].price},- kr.</div>
+        </section>
+            <br>
+      `
+    } return html
+    }
   if (search !== null) {
     if (category === "alt") list = searchAll();
     else if (category !== "alt" && category !== null) list = searchCategories();
@@ -126,16 +142,16 @@ function generateProductList(list) {
   let html = "";
   for (let i = 0; i < list.length; i++) {
     html += /*HTML*/ `
-            <section class="product" onclick="goToProductPage(${list[i].id})" >
-                <img class="previewimg" 
-                src="${list[i].img}">
-                <div class="product-text">${list[i].title}</div>
-                <div class="product-text">${list[i].artist}</div>
-                <div class="product-text">${list[i].formatID}</div>
-                <div>${list[i].price},- kr.</div>
-    
-            </section>
-            <br>
+        <section class="product" onclick="goToProductPage(${list[i].id})" >
+            <img class="previewimg" 
+            src="${list[i].img}">
+            <div class="product-text">${list[i].title}</div>
+            <div class="product-text">${list[i].artist}</div>
+            <div class="product-text">${list[i].formatID}</div>
+            <div>${list[i].price},- kr.</div>
+
+        </section>
+        <br>
         `;
   }
 
