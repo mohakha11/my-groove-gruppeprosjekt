@@ -96,21 +96,21 @@ const model = {
       productID: 2,
       userID: 2,
       comment: "Fet skive",
-      stars: 4,
+      stars: "★★★☆☆",
       timestamp: "01.11.2026",
     },
     {
       productID: 2,
       userID: 3,
       comment: "Høres best ut utendørs. Gjerne flere kilometer unna.",
-      stars: 1,
+      stars: "★☆☆☆☆",
       timestamp: "13.09.2024",
     },
     {
       productID: 2,
       userID: 4,
       comment: "Han synger som om han har svelget en hel bikube, men på en god måte.",
-      stars: 1,
+      stars: "★★★★★",
       timestamp: "04.06.2024",
     },
   ],
@@ -151,8 +151,8 @@ const model = {
       registerDate: "10.10.2026",
       lastOnline: "16.10.2026",
       contributions: 42,
-      favorites: [], //ID til produkter i butikk
-      collection: [1, 2, 3],
+      favorites: [30], //ID til produkter i butikk
+      collection: [30, 18, 3, 7, 19],
       formatPref: null, //kunde sin format preferanse.
     },
     {
@@ -192,7 +192,7 @@ const model = {
     {
       userID: 4,
       img: "",
-      userName: "Terje",
+      userName: "TerjeScript",
       email: "terjekolderup@getacademy.no",
       phoneNumber: 87654321,
       firstName: "Terje",

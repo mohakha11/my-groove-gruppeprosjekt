@@ -1,6 +1,6 @@
 function cartPage() {
   let html = /*HTML*/ `
-    <button onclick="goBackToPage('home')">Tilbake</button>
+    <button onclick="goBackToPage('home')">Tilbake til butikk</button>
         <div id="cart-container">
             <section class="cart" style="border-right: 1px solid #ddd;">
                 <h2>Handlekurv</h2>
@@ -61,7 +61,7 @@ function showProductsCart() {
 
 function payPage() {
   let html = /*HTML*/ `
-    <button onclick="goBackToPage('cart')">Tilbake</button>
+    <button onclick="goBackToPage('cart')">Tilbake til handlekurv</button>
     <div id="pay-container">
         <section>
             <h3>Kundeinformasjon</h3>

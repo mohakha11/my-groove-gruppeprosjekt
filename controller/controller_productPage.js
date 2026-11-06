@@ -60,12 +60,11 @@ function displayComments(productID){
     console.log("review", review)
     html += /*HTML*/ `
       <div>
-        <img src="img/placeholder-profile.png">
-          <p>${userReview.userName} ${review.timeStamp}</p>
-  
-            <p>★★★☆☆</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      
+        <p><img src="img/placeholder-profile.png"
+        class="profile-img-container-header"
+        > ${userReview.userName}, ${review.timestamp}</p>
+          <p>${review.stars}</p>
+          <p>${review.comment}</p>
       </div>
     
     ` 

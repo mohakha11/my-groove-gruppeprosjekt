@@ -1,7 +1,7 @@
 function profilePage() {
   let user = findLoggedInUser();
   let html = /*HTML*/ `
-  <button onclick="goBackToPage('home')">Tilbake</button>
+  <button onclick="goBackToPage('home')">Tilbake til butikk</button>
   <div class="profile-page">
     <section class="profile-main-section"> 
         <div class="profile-info-box"> 

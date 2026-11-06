@@ -10,7 +10,7 @@ function productPage() {
   }
 
   let html = /*HTML*/ `
-    <button onclick="goBackToPage('home')">Tilbake</button>
+    <button onclick="goBackToPage('home')">Tilbake til butikk</button>
     
     <section id="productInfoSection">
         <div class="product-left">
@@ -57,26 +57,6 @@ function productPage() {
         
         <div>
             ${displayComments(product.id)}
-        </div>
-
-
-        <div>
-            <img src="img/placeholder-profile.png">
-            <p>brukernavn</p>
-            <p>1.12.2020 ★★★★☆</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        </div>
-        <div>
-            <img src="img/placeholder-profile.png">
-            <p>brukernavn2</p>
-            <p>2.12.2020 ★★★☆☆</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        </div>
-        <div>
-            <img src="profileImage">
-            <p>brukernavn3</p>
-            <p>3.12.2020 ★★☆☆☆</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
         </div>
     </section>
   `;
