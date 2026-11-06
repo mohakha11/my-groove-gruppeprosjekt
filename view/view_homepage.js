@@ -131,6 +131,7 @@ function generateProductList(list) {
                 src="${list[i].img}">
                 <div class="product-text">${list[i].title}</div>
                 <div class="product-text">${list[i].artist}</div>
+                <div class="product-text">${list[i].formatID}</div>
                 <div>${list[i].price},- kr.</div>
     
             </section>

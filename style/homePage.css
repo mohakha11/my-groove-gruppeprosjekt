@@ -100,21 +100,23 @@
 }
 
 .previewimg {
-  display: flex;
+  display: grid;
   position: center;
   min-width: 50%;
   min-height: auto;
-  max-height: 3000%;
+  max-height: 300px;
   max-width: 300px;
   cursor: pointer;
 }
 
 .product-text {
-  max-width: 200px;
+  display: flex;
+  align-items: center;
+  max-width: 300px;
 }
 
 /* Mobilvisning */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   #category {
     display: grid;
   }

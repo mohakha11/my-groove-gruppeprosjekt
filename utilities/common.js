@@ -137,17 +137,109 @@ function testProduct() {
     updated: "04.11.2026",
   };
 
+  const inthecourtofthecrimsonkingVinyl = {
+    id: 9,
+    title: "In the Court of the Crimson King",
+    img: "img/cover_inthecourtofthecrimsonking.jpeg",
+    formatID: "Vinyl", //placeholder
+    artist: "King Crimson",
+    year: 1969,
+    label: "Island",
+    price: 599,
+    amount: 90,
+    updated: "04.11.2026",
+  };
+
+  const paranoidVinyl = {
+    id: 10,
+    title: "Paranoid",
+    img: "img/cover_paranoid.jpg",
+    formatID: "Vinyl", //placeholder
+    artist: "Black Sabbath",
+    year: 1970,
+    label: "Vertigo",
+    price: 299,
+    amount: 130,
+    updated: "04.11.2026",
+  };
+
+  //kassett
+  const sputnik1Kassett = {
+    id: 11,
+    title: "Sputnik 1",
+    img: "img/cover_sputnik1.jpg",
+    formatID: "Kassett", //placeholder
+    artist: "Sputnik",
+    year: 1986,
+    label: "Busk",
+    price: 19,
+    amount: 40,
+    updated: "04.11.2026",
+  };
+
+  const sputnik2Kassett = {
+    id: 12,
+    title: "Sputnik 2",
+    img: "img/cover_sputnik2.jpg",
+    formatID: "Kassett", //placeholder
+    artist: "Sputnik",
+    year: 1986,
+    label: "Busk",
+    price: 19,
+    amount: 40,
+    updated: "04.11.2026",
+  };
+
+  const sputnik3Kassett = {
+    id: 13,
+    title: "Sputnik 3",
+    img: "img/cover_sputnik3.jpg",
+    formatID: "Kassett", //placeholder
+    artist: "Sputnik",
+    year: 1987,
+    label: "Busk",
+    price: 19,
+    amount: 30,
+    updated: "04.11.2026",
+  };
+
+  const sputnik4Kassett = {
+    id: 14,
+    title: "Sputnik 4",
+    img: "img/cover_sputnik4.jpg",
+    formatID: "Kassett", //placeholder
+    artist: "Sputnik",
+    year: 1988,
+    label: "Busk",
+    price: 19,
+    amount: 20,
+    updated: "04.11.2026",
+  };
+
   //CD
   const larsmonsenCD = {
-    id: 50,
-    title: "CANADA PÅ TVERS: Musikken fra serien",
+    id: 30,
+    title: "Canada på tvers: Musikken fra serien",
     img: "img/cover_larsmonsen.webp",
     formatID: "CD", //placeholder
     artist: "Lars Monsen",
     year: 2005,
     label: "NRK",
-    price: 79,
+    price: 15,
     amount: 930,
+    updated: "04.11.2026",
+  };
+
+  const blackalbumCD = {
+    id: 31,
+    title: "Metallica(The Black Album)",
+    img: "img/cover_blackalbum.jpg",
+    formatID: "CD", //placeholder
+    artist: "Metallica",
+    year: 1991,
+    label: "Elektra",
+    price: 79,
+    amount: 220,
     updated: "04.11.2026",
   };
 
@@ -160,7 +252,16 @@ function testProduct() {
   model.productsData.push(vinfrakjøkkenglassVinyl);
   model.productsData.push(electricladylandVinyl);
   model.productsData.push(bluesbrothersVinyl);
+  model.productsData.push(inthecourtofthecrimsonkingVinyl);
+  model.productsData.push(paranoidVinyl);
+
+  //kassett
+  model.productsData.push(sputnik1Kassett);
+  model.productsData.push(sputnik2Kassett);
+  model.productsData.push(sputnik3Kassett);
+  model.productsData.push(sputnik4Kassett);
 
   //cd
   model.productsData.push(larsmonsenCD);
+  model.productsData.push(blackalbumCD);
 }
