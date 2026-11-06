@@ -37,6 +37,47 @@ function addToFavorites(productID) {
   }
 }
 
+function findCurrentProduct(productID){
+  for (let product of model.productsData){
+    if (product.id === productID) return product
+  }
+}
+
 function addComment(productID){
+
+}
+
+function displayComments(productID){
+  let html = ''
+  let userReview = ''
+  const reviews = model.reviews
+  const currentProduct = findCurrentProduct(productID)
+
+  //Objektet til produktet
+  for (let review of reviews) {
+    userReview = findUserReview(review.userID)
+    console.log("user", userReview)
+    console.log("review", review)
+    html += /*HTML*/ `
+      <div>
+        <img src="img/placeholder-profile.png">
+          <p>${userReview.userName} ${review.timeStamp}</p>
   
+            <p>★★★☆☆</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      
+      </div>
+    
+    ` 
+  }
+  return html
+}
+
+
+function findUserReview(userID){
+  const users = model.usersProfile;
+  for (let user of users) {
+    if (user.userID === userID) return user
+  }
+
 }

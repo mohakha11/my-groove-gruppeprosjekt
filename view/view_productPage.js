@@ -56,6 +56,11 @@ function productPage() {
         </div>
         
         <div>
+            ${displayComments(product.id)}
+        </div>
+
+
+        <div>
             <img src="img/placeholder-profile.png">
             <p>brukernavn</p>
             <p>1.12.2020 ★★★★☆</p>
