@@ -21,9 +21,9 @@
   gap: 20px;
 }
 
-.previewimg {
-  height: 200px;
-  width: 200px;
+.previewimg-cart {
+  max-height: 150px;
+  max-width: 150px;
   cursor: pointer;
 }
 
@@ -35,6 +35,6 @@
   background-color: aliceblue;
 }
 
-#storage-nav{
+#storage-nav {
   display: flex;
 }

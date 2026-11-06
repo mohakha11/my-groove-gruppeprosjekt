@@ -1,5 +1,5 @@
-function cartPage(){
-    let html = /*HTML*/`
+function cartPage() {
+  let html = /*HTML*/ `
     <button onclick="goBackToPage('home')">Tilbake</button>
         <div id="cart-container">
             <section class="cart" style="border-right: 1px solid #ddd;">
@@ -20,23 +20,23 @@ function cartPage(){
                 onclick="goToPayPage()">Gå til betaling</button>
             </section>
         </div>
-    `
+    `;
 
-    return html
+  return html;
 }
 
-function showProductsCart(){
-    let html = ''
-    let cart = model.viewState.cart
+function showProductsCart() {
+  let html = "";
+  let cart = model.viewState.cart;
 
-    if (cart.length < 1) html = /*HTML*/ `<div>Handlekurven er tom</div>`
-    else {
-        for (let cartItem = 0; cartItem < cart.length; cartItem ++) {
-            for (let product of model.productsData){
-                if (cart[cartItem].productID === product.id){
-                    html += /*HTML*/ ` 
+  if (cart.length < 1) html = /*HTML*/ `<div>Handlekurven er tom</div>`;
+  else {
+    for (let cartItem = 0; cartItem < cart.length; cartItem++) {
+      for (let product of model.productsData) {
+        if (cart[cartItem].productID === product.id) {
+          html += /*HTML*/ ` 
                     <section class="cartItem">
-                        <img class="previewimg" 
+                        <img class="previewimg-cart" 
                         src="${product.img}">
 
                         <div>
@@ -51,15 +51,16 @@ function showProductsCart(){
                                 >Fjern</button></div>
                             </section>
                         </div>
-                    </section>`
-                }
-            }}
+                    </section>`;
+        }
+      }
     }
-    return html
+  }
+  return html;
 }
 
-function payPage(){
-    let html = /*HTML*/ `
+function payPage() {
+  let html = /*HTML*/ `
     <button onclick="goBackToPage('cart')">Tilbake</button>
     <div id="pay-container">
         <section>
@@ -119,7 +120,7 @@ function payPage(){
         </section>
     
     </div>
-    `
+    `;
 
-    return html
+  return html;
 }
