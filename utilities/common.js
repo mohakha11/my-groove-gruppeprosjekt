@@ -124,6 +124,34 @@ function testProduct() {
     updated: "04.11.2026",
   };
 
+  const bluesbrothersVinyl = {
+    id: 8,
+    title: "The Blues Brothers: Original Soundtrack Recording",
+    img: "img/cover_bluesbrothers.jpg",
+    formatID: "Vinyl", //placeholder
+    artist: "The Blues Brothers",
+    year: 1960,
+    label: "Atlantic",
+    price: 599,
+    amount: 180,
+    updated: "04.11.2026",
+  };
+
+  //CD
+  const larsmonsenCD = {
+    id: 50,
+    title: "CANADA PÅ TVERS: Musikken fra serien",
+    img: "img/cover_larsmonsen.webp",
+    formatID: "CD", //placeholder
+    artist: "Lars Monsen",
+    year: 2005,
+    label: "NRK",
+    price: 79,
+    amount: 930,
+    updated: "04.11.2026",
+  };
+
+  //vinyl
   model.productsData.push(sabbathbloodyVinyl);
   model.productsData.push(darksideofthemoonVinyl);
   model.productsData.push(neverlovedelvisVinyl);
@@ -131,8 +159,8 @@ function testProduct() {
   model.productsData.push(somewhereintimeVinyl);
   model.productsData.push(vinfrakjøkkenglassVinyl);
   model.productsData.push(electricladylandVinyl);
+  model.productsData.push(bluesbrothersVinyl);
 
-  //   model.productsData.push(titleVinyl);
-  //   model.productsData.push(titleVinyl);
-  //   model.productsData.push(titleVinyl);
+  //cd
+  model.productsData.push(larsmonsenCD);
 }

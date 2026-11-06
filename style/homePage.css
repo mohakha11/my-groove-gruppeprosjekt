@@ -99,6 +99,20 @@
   padding: 0; /* Fjerner padding rundt */
 }
 
+.previewimg {
+  display: flex;
+  position: center;
+  min-width: 50%;
+  min-height: auto;
+  max-height: 3000%;
+  max-width: 300px;
+  cursor: pointer;
+}
+
+.product-text {
+  max-width: 200px;
+}
+
 /* Mobilvisning */
 @media (max-width: 500px) {
   #category {

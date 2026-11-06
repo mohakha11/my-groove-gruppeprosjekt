@@ -129,8 +129,8 @@ function generateProductList(list) {
             <section class="product" onclick="goToProductPage(${list[i].id})" >
                 <img class="previewimg" 
                 src="${list[i].img}">
-                <div>${list[i].title}</div>
-                <div>${list[i].artist}</div>
+                <div class="product-text">${list[i].title}</div>
+                <div class="product-text">${list[i].artist}</div>
                 <div>${list[i].price},- kr.</div>
     
             </section>
