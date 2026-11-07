@@ -50,7 +50,7 @@ function testProduct() {
 
   const darksideofthemoonVinyl = {
     id: 2,
-    title: "Sabbath Bloody Sabbath",
+    title: "Dark Side of the Moon",
     img: "img/cover_darksideofthemoon.png",
     formatID: "Vinyl", //placeholder
     artist: "Pink Floyd",
