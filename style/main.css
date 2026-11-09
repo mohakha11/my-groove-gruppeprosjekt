@@ -35,6 +35,25 @@
   border-radius: 0; /* Fjerner runde hjørner så den dekker helt ut */
 }
 
+#contact:hover {
+  border-bottom: solid 1px;
+}
+
+#logo {
+  transition: transform 250ms ease;
+}
+
+#logo:hover {
+  transform: scaleX(1.04)
+}
+
+#profileBtn {
+  transition: transform 250ms ease;
+}
+
+#profileBtn:hover {
+  transform: scale(1.1);
+}
 /* Størrelser på ikoner og logo */
 #logo {
   height: 100px;

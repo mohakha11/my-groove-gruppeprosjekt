@@ -22,7 +22,7 @@ function updateView() {
 
                     <div class="header">
 
-                        <div onclick="changePage('contactPage')"
+                        <div onclick="changePage('contactPage')" id="contact"
                         style="cursor: pointer; margin-top: 30px; font-size: 40px;">Kontakt oss</div>
 
                         <abbr title="Startside"><img onclick="changePage('landingPage')" src="img/headerlogo.webp"
