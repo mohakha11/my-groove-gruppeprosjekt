@@ -15,7 +15,7 @@ function productPage() {
     <section id="productInfoSection">
         <div class="product-left">
             <img src="${product.img}">
-            <div>★★★★☆</div>
+            <div style="font-size: 45px;">★★★★☆</div>
             <button onclick="location.href='#commentSection'">Kommentarer</button>
         </div>
         <div class="product-right">

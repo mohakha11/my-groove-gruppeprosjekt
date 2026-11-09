@@ -116,6 +116,32 @@
   max-width: 300px;
 }
 
+.product {
+  position: relative;
+  cursor: pointer;
+  transition: transform 250ms ease;
+}
+
+.product:hover {
+  z-index: 1;
+  transform: scale(1.05);
+}
+
+.product .previewimg {
+  transition: transform 250ms ease;
+}
+
+.product:hover .previewimg {
+  transform: scale(0.95238);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product,
+  .product .previewimg {
+    transition: none;
+  }
+}
+
 /* Mobilvisning */
 @media (max-width: 600px) {
   #category {
