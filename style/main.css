@@ -37,7 +37,8 @@
 
 /* Størrelser på ikoner og logo */
 #logo {
-  height: 80px;
+  height: 100px;
+  margin-top: 10px;
   cursor: pointer;
   object-fit: contain;
 }
@@ -82,8 +83,9 @@ html {
   }
 
   #cartBtn {
-    height: 30px;
-    width: 30px;
+    margin-left: 70px;
+    height: 80px;
+    width: 80px;
     cursor: pointer;
   }
   .profile-img-header {
@@ -109,7 +111,7 @@ html {
   width: 180px;
 }
 
-#new-product-container{
+#new-product-container {
   display: flex;
   gap: 20px;
 }
@@ -140,9 +142,10 @@ html {
   grid-row: 2;
 }
 
-header {    /*når du scroller   #MK*/
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: white; 
+header {
+  /*når du scroller   #MK*/
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
 }
