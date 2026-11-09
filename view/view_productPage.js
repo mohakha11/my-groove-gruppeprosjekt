@@ -26,7 +26,10 @@ function productPage() {
             <p>${product.formatID}</p>
 
             <button onclick="addToCart(${currentProduct})">Legg til handlekurv</button>
+            <div id="cart-feedback-message" style="margin-top: 5px; color: green; font-weight: bold;"></div>
+
             <button onclick="addToFavorites(${currentProduct})">Legg til som favoritt</button>
+            <div id="feedback-message" style="margin-top: 5px; color: green; font-weight: bold;"></div>
 
             <div class="priceAndStock">
                 <div><strong>${product.price},-</strong></div>

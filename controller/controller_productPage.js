@@ -8,6 +8,13 @@ function addToCart(productID) {
   );
   model.viewState.productPage.selectedAmount = 1;
   updateView();
+
+  const messageBox = document.getElementById("cart-feedback-message");
+    messageBox.innerText = "Lagt til i handlekurv! 🛒";
+
+    setTimeout(function() {
+        messageBox.innerText = "";
+    }, 2000);
 }
 
 function goToProductPage(productID) {
@@ -37,6 +44,12 @@ function addToFavorites(productID) {
         currentUser.favorites.push(obj.id);
     }
   }
+  const messageBox = document.getElementById("feedback-message");
+    messageBox.innerText = "Lagt til i favoritter! ⭐";
+
+    setTimeout(function() {
+        messageBox.innerText = "";
+    }, 2000);
 }
 
 function findCurrentProduct(productID){
