@@ -30,8 +30,9 @@
   margin-top: 20px;
   margin-left: 5%;
   margin-right: 5%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(8, 200px);
+  grid-template-rows: repeat(auto, 200px);
   gap: 20px;
 }
 
