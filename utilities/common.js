@@ -1,6 +1,6 @@
 function changePage(page) {
   model.app.currentPage = page;
-  window.scrollTo(0, 0);/*Mk*/
+  window.scrollTo(0, 0); /*Mk*/
   updateView();
 }
 
@@ -260,7 +260,7 @@ function testProduct() {
 
   const darksideofthemoonCD = {
     id: 32,
-    title: "Sabbath Bloody Sabbath",
+    title: "Dark Side of the Moon",
     img: "img/cover_darksideofthemoon.png",
     formatID: "CD", //placeholder
     artist: "Pink Floyd",
